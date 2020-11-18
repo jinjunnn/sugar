@@ -1,0 +1,49 @@
+ <!--pages/user/help/help.wxml-->
+ <view class="contain">
+     <view class="title_wrap">
+         <view class="title_img_wrap">
+             <image class="title_img" src="{{user_image}}">
+             </image>
+         </view>
+         <view class="title_content_wrap">
+             <view class="title_content_text_intergal">当前积分：0</view>
+         </view>
+     </view>
+
+     <view class="donothaveintergal" hover-class="none" hover-stop-propagation="false">
+         您好，积分活动暂未开启，请您耐心等待。
+     </view>
+     <!-- <view class="signin_wrap">
+        <view class="signin_title">佣金规则</view>
+        <view>
+            <text>
+                
+            </text>
+        </view>
+     </view> -->
+
+     <!-- <view class="signin_wrap">
+         <view class="signin_title">佣金明细</view>
+         <view wx:for="{{wishlist}}" wx:key="wishkey">
+             <view class="task_subwrap" bindtap="bindNavToDetail" data-key="{{item.key}}"
+                 data-price="{{item.intergal_price}}">
+                 <view>
+                     <image src="{{item.image}}" class="image_goods"></image>
+                 </view>
+                 <view class="task_subwrap_wrap">
+                     <view class="task_subwrap_title">{{item.name}}</view>
+                     <view class="task_subwrap_title">{{item.content}}</view>
+                     <view class="task_subwrap_content">{{item.intergal_price}} 积分</view>
+                 </view>
+                 <view>
+                     <image src="/image/前进.png" class="image_arrow"></image>
+                 </view>
+             </view>
+         </view>
+     </view> -->
+
+
+
+
+     <view style="height:60rpx"></view>
+ </view>

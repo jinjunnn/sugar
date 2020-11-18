@@ -1,0 +1,47 @@
+    <!-- 用户是否存在userinfo -->
+    <view class="wrap">
+        <view class="sub_wrap">
+            <view class="sub_title">商品名称</view>
+            <input placeholder="请输入商品名称" confirm-type="next" value="{{title}}" bindinput="input_title" bindblur=""
+                bindfocus="" bindconfirm="" class="picker"></input>
+        </view>
+        <view class="sub_wrap">
+            <view class="sub_title">需求详情</view>
+            <textarea placeholder="请输入您要购买商品的详情" value="{{content}}" auto-height confirm-type="next"
+                bindinput="input_content" bindfocus="" bindconfirm="" bindblur="" class="textarea"></textarea>
+        </view>
+        <view class="sub_wrap">
+            <view class="sub_title">商品图片</view>
+            <view wx:if="{{!image}}" bindtap="bind_images" data-image="userinfo">
+                <image class="image_not_upload" src="{{add_icon}}"></image>
+            </view>
+            <view wx:else class="image_item_wrap" bindtap="bind_images" data-image="userinfo">
+                <view class="image_item_wrap">
+                    <image class="image_not_upload" src="{{image}}"></image>
+                </view>
+            </view>
+        </view>
+
+        <view class="tips" hover-class="none" hover-stop-propagation="false">
+            <text class="" selectable="false" space="false" decode="false">下单须知：
+                1关于订单：您下单后，我们将第一时间通知200余名职业买手为您报价，对您提供高效、安全的海淘服务。
+                2合作买手：为向您提供高效快捷安全的海淘服务，我们合作的职业买手，均缴纳8500元以上保证金，并从业3年以上。
+                3海淘风险：如遇职业买手不未发货，我们第一时间扣除改名职业买手的保证金，不足部分由平台全资补贴。
+                4关于正品：您购买的每一件商品，本平台均会核实职业买手的小票、支付记录，如遇假货，扣除职业买手保证金、终止合作、同业通报，金额较大会帮您做报案处理，确保您的商品为正品。
+                5关于订金：每提交一笔海淘订单，我们收取6元订金，订单交易成功、订单取消将返还您的订金，如您提交的订单有违反本平台禁止海淘的商品信息，平台有权删除您的订单并扣除您的保证金。
+                6提交以下订单会删除您的订单并扣除订金：提交法律禁止购买的商品、烟以及电子烟、提交的订单中有营销链接或营销联系方式。
+            </text>
+
+        </view>
+        <switch style="margin:20rpx 0 0 20rpx; font-size:20rpx;"  type="checkbox"
+            checked="{{checked}}" bindchange="switch2Change">
+            我已了解下单须知
+        </switch>
+
+
+        <button class="button" bindtap="bind_submit">
+            支付订金
+        </button>
+        <view style="height:100rpx">
+        </view>
+    </view>

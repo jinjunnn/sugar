@@ -1,0 +1,19 @@
+
+<view class="wraps" hover-class="none" hover-stop-propagation="false">
+    <block wx:for="{{sell_list}}" wx:key="item">
+        <view class="item_wrap" hover-class="none" hover-stop-propagation="false" bindtap="bind_detail" data-key="{{item.key}}">
+            <image class="image" src="{{item.image}}" mode="aspectFill" lazy-load="false" binderror="" bindload="">
+                
+            </image>
+            <view class="text" hover-class="none" hover-stop-propagation="false">
+                {{item.name}}
+            </view>
+            <view class="etb" hover-class="none" hover-stop-propagation="false" wx:if="{{item.etb}}">
+                etb:{{item.etb}}
+            </view>
+            <view class="price" hover-class="none" hover-stop-propagation="false">
+                ￥{{item.price}}
+            </view>
+        </view>
+    </block>
+</view>

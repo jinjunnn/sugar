@@ -1,0 +1,21 @@
+<!--pages/act/act.wxml-->
+<view wx:for="{{list}}" wx:key="item">
+    <view class="wrap" bindtap="bind_detail_page" data-link="{{item.link}}" data-key="{{item.key}}">
+        <image src="{{item.image}}" class="image" mode='aspectFill'></image>
+        <view class="content_wrap">
+            <view class="left_content">
+                <view class="title">
+                    {{item.title}}
+                </view>
+                <view class="content">
+                    {{item.content}}
+                </view>
+            </view>
+            <view class="right_content">
+                    <view class="right_item">{{item.buttons}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view style="height: 80rpx;"></view>

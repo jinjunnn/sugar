@@ -1,0 +1,92 @@
+<view>
+    <view class="status">
+        <image class="order" src="{{icon_order}}" />
+        <view class="status_main">
+            <view style="font-size:24rpx">
+                {{trans_status.status}}
+            </view>
+            <view>
+                <view>
+                    您购买的商品预计{{data.month}}月{{data.data}}日前送达您的手中，准备好收快递哟~~
+                </view>
+                <view>
+                    最新物流状态：{{trans_status.process}}
+                </view>
+                <!-- <view>
+                    {{trans_status.time}}
+                </view> -->
+            </view>
+        </view>
+        <!-- <image class="right_arr" src="{{icon_order}}" /> -->
+    </view>
+    <!-- 地址 -->
+    <view>
+        <view class="gap"></view>
+        <view bindtap="bind_get_user_address" class="address_wrap">
+            <view class="address_text_wrap">
+                <view class="address_title">收货人信息</view>
+                <view class="address_detail">{{order.attributes.address.userName}} {{order.attributes.address.telNumber}}</view>
+                <view class="address_detail">
+                    {{order.attributes.address.provinceName}}{{order.attributes.address.cityName}}{{order.attributes.address.countyName}}{{order.attributes.address.detailInfo}}
+                </view>
+            </view>
+            <image class="arror_icon" src="{{arror_icon}}"></image>
+        </view>
+        <view class="gap"></view>
+    </view>
+
+    <!-- 产品 -->
+    <view class="product_wrap">
+        <image class="product_image" src="{{order.attributes.image}}"></image>
+        <view class="text_wrap">
+            <view class="text_title">{{order.attributes.productDescription}}</view>
+            <view class="sku_wrap">
+                <view wx:for="{{order.attributes.sku}}" wx:key="item">
+                    <view class="sku_item_wrap">
+                        <view class="sku_item">{{item.label}}:{{item.desc}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="price_wrap">
+                <view class="product_price">￥{{order.attributes.price}}</view>
+                <view class="product_amount"> × {{order.attributes.piece}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="gap"></view>
+
+    <!-- 服务费，红包，优惠券 -->
+    <view class="fee_wrap">
+        <view class="item_wrap">
+            <view class="fee_text">付款总金额</view>
+            <view class="fee_text">{{order.attributes.price}}元，共计减免<text
+                    style="color: #D54547;">{{discount}}</text>元</view>
+        </view>
+        <view class="item_wrap">
+            <view class="fee_text">商品价格</view>
+            <view class="fee_text">{{order.attributes.price}}元</view>
+        </view>
+        <view class="item_wrap">
+            <view class="fee_text">代买服务费</view>
+            <view class="fee_text"><text style="color: #D54547;">(已减免{{order.attributes.fee}})</text>  0.00元</view>
+        </view>
+        <view class="item_wrap">
+            <view class="fee_text">国际运费</view>
+            <view class="fee_text"><text style="color: #D54547;">(已减免30.00元)</text>  0.00元</view>
+        </view>
+        <view class="item_wrap">
+            <view class="fee_text">国内运费</view>
+            <view class="fee_text"><text style="color: #D54547;">(已减免9.00元)</text>  0.00元</view>
+        </view>
+        <view class="item_wrap">
+            <view class="fee_text">商品关税</view>
+            <view class="fee_text"><text style="color: #D54547;">(已减免{{tax}}元)</text>  0.00元</view>
+        </view>
+    </view>
+    <view class="gap"></view>
+    <view>
+        <image src='data:image/png;base64,{{qr_code}}' style="height:250rpx; width:250rpx;padding:20rpx 250rpx 20rpx 250rpx"></image>
+        <view style="font-size:20rpx;text-align: center;padding:20rpx">分享订单，邀请好友可以获得平台补贴哟~</view>
+        <view style="height:200rpx"></view>
+    </view>
+</view>

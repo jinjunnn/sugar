@@ -1,0 +1,99 @@
+page {
+    background-color: #f2f2f2;
+}
+
+.wrap {
+    margin: 20rpx;
+}
+
+.item_wrap {
+    background: #fff;
+    border-radius: 10rpx 10rpx 0rpx 0rpx;
+    padding: 10rpx;
+    display: -webkit-flex;
+    border-bottom: 1rpx solid #f2f2f2;
+}
+
+.item_image {
+    height: 160rpx;
+    width: 160rpx;
+}
+
+.item_content {
+    width: 530rpx;
+    padding: 10rpx;
+}
+
+.item_content_name {
+    font-size: 24rpx;
+    /* 以下多行文字溢出 */
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.item_content_subwrap {
+    display: -webkit-flex;
+    justify-content: space-between;
+    color: #aaaaaa;
+    font-size: 20rpx;
+}
+
+.pay_wrap {
+    background: #fff;
+    border-radius: 0rpx 0rpx 10rpx 10rpx;
+    padding: 10rpx;
+    display: -webkit-flex;
+    justify-content: space-between;
+    margin-bottom: 30rpx;
+}
+
+.pay_left_part {
+    display: -webkit-flex;
+    font-size: 28rpx;
+}
+
+.pay_left_part_icon {
+    height: 28rpx;
+    width: 28rpx;
+    margin: 5rpx;
+}
+
+.pay_right_part {}
+
+.pay_left_part_text {
+    font-size: 24rpx;
+    color: #D54547;
+}
+
+.pay_right_part_total {
+    font-size: 24rpx;
+    margin-right: 20rpx;
+    text-align: right;
+    padding-right: 20rpx;
+}
+
+.button_buy {
+    margin-top: 30rpx;
+    margin-right: 20rpx;
+    border: 1rpx solid #aaaaaa;
+    font-size: 24rpx;
+    color: #aaaaaa;
+    text-align: center;
+    border-radius: 10rpx;
+    padding: 10rpx;
+    width: 100rpx;
+    float: right;
+}
+
+.sku_item_wrap {
+    display: -webkit-flex;
+}
+
+.sku_item {
+    font-size: 24rpx;
+    color: #b0b0b0;
+    padding: 10rpx;
+}

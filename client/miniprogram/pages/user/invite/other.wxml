@@ -1,0 +1,23 @@
+ <!--pages/user/help/help.wxml-->
+ <view class="contain">
+     <view class="signin_wrap">
+         <view class="signin_title">您已经邀请了{{amounts}}好友</view>
+         <view class="signin_title2">{{settings.share_page_content}}</view>
+         <view class="image_wrap" hover-class="none" hover-stop-propagation="false">
+             <view wx:for="{{usrs}}" wx:key="wishkey">
+                 <image src="{{item[3]}}" mode="aspectFill" class="image_goods"></image>
+             </view>
+             <view wx:for="{{arr}}" wx:key="wishkey">
+                 <view class="image_else"></view>
+             </view>
+         </view>
+         <button class="buttons" open-type="share">
+             分享给好友
+         </button>
+         <view style="font-size:20rpx;padding:20rpx">
+             <text>{{settings.share_page_rule}}
+             </text>
+         </view>
+     </view>
+     <view style="height:30rpx"></view>
+ </view>

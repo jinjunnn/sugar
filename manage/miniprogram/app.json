@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/land/landling",
+    "pages/list/list",
+    "pages/post/post",
+    "pages/landing/landing",
+    "pages/landing/sell/sell",
+    "pages/landing/modify/modify"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}
+

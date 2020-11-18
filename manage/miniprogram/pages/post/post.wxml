@@ -1,0 +1,253 @@
+<!-- 发布美国货 -->
+<view wx:if="{{list_key=='shop_sugar_total_sell_list'}}">
+    <textarea placeholder="标题" model:value="{{title}}" auto-height confirm-type="next"
+        bindinput="input_title" bindfocus="" bindconfirm="" bindblur="" class="textarea"></textarea>
+
+    <textarea placeholder="出售详情详情（选填）" model:value="{{content}}" auto-height confirm-type="next"
+        bindinput="input_content" bindfocus="" bindconfirm="" bindblur="" class="textarea"></textarea>
+
+    <input placeholder="请输入品牌(选填)" confirm-type="next"  model:value="{{brand}}" bindinput="input_brand"
+        bindblur="" bindfocus="" bindconfirm="" class="picker"></input>
+
+    <input placeholder="请输入价格(元)(选填)" confirm-type="next" type='digit' model:value="{{price}}" bindinput="input_price"
+        bindblur="" bindfocus="" bindconfirm="" class="picker"></input>
+    <view style='margin:20rpx;color:gray'>上传图片(选填)</view>
+    <view wx:if="{{!image}}" bindtap="bind_images">
+        <image class="image_not_upload" src="{{add_icon}}"/>
+    </view>
+    <view wx:else class="image_item_wrap" bindtap="bind_images">
+        <view class="image_item_wrap">
+            <image class="image_not_upload" src="{{image}}"/>
+        </view>
+    </view>
+    <button class="button" bindtap="bind_submit">
+        发布信息
+    </button>
+    <view style="height:100rpx">
+    </view>
+</view>
+
+<!-- 发布日本货 -->
+<view wx:if="{{list_key=='shop_sugar_japan_list'}}">
+    <textarea placeholder="标题" model:value="{{title}}" auto-height confirm-type="next"
+        bindinput="input_title" bindfocus="" bindconfirm="" bindblur="" class="textarea"></textarea>
+
+    <textarea placeholder="出售详情详情（选填）" model:value="{{content}}" auto-height confirm-type="next"
+        bindinput="input_content" bindfocus="" bindconfirm="" bindblur="" class="textarea"></textarea>
+
+    <input placeholder="请输入品牌(选填)" confirm-type="next"  model:value="{{brand}}" bindinput="input_brand"
+        bindblur="" bindfocus="" bindconfirm="" class="picker"></input>
+
+    <input placeholder="请输入价格(元)(选填)" confirm-type="next" type='digit' model:value="{{price}}" bindinput="input_price"
+        bindblur="" bindfocus="" bindconfirm="" class="picker"></input>
+    <view style='margin:20rpx;color:gray'>上传图片(选填)</view>
+    <view wx:if="{{!image}}" bindtap="bind_images">
+        <image class="image_not_upload" src="{{add_icon}}"/>
+    </view>
+    <view wx:else class="image_item_wrap" bindtap="bind_images">
+        <view class="image_item_wrap">
+            <image class="image_not_upload" src="{{image}}"/>
+        </view>
+    </view>
+    <button class="button" bindtap="bind_submit">
+        发布信息
+    </button>
+    <view style="height:100rpx">
+    </view>
+</view>
+
+<!-- 发布SUGAR快闪店求购信息 -->
+<view wx:if="{{list_key=='shop_sugar_requery_list'}}">
+    <textarea placeholder="请填写收货信息" model:value="{{title}}" auto-height confirm-type="next"
+        bindinput="input_title" bindfocus="" bindconfirm="" bindblur="" class="textarea"></textarea>
+    <textarea placeholder="收货详情（选填）" model:value="{{content}}" auto-height confirm-type="next"
+        bindinput="input_content" bindfocus="" bindconfirm="" bindblur="" class="textarea"></textarea>
+    <input placeholder="请输入品牌(选填)" confirm-type="next"  model:value="{{brand}}" bindinput="input_brand"
+        bindblur="" bindfocus="" bindconfirm="" class="picker"></input>
+    <input placeholder="请输入价格(元)(选填)" confirm-type="next" type='digit' model:value="{{price}}" bindinput="input_price"
+        bindblur="" bindfocus="" bindconfirm="" class="picker"></input>
+    <view style='margin:20rpx;color:gray'>上传图片(选填)</view>
+    <view wx:if="{{!image}}" bindtap="bind_images">
+        <image class="image_not_upload" src="{{add_icon}}"/>
+    </view>
+    <view wx:else class="image_item_wrap" bindtap="bind_images">
+        <view class="image_item_wrap">
+            <image class="image_not_upload" src="{{image}}"/>
+        </view>
+    </view>
+    <button class="button" bindtap="bind_submit">
+        发布收货
+    </button>
+    <view style="height:100rpx">
+    </view>
+</view>
+
+
+
+<!-- 发布海淘助手求购信息 -->
+<view wx:if="{{list_key=='glist_buy_goods'}}">
+    <textarea placeholder="请填写收货信息" model:value="{{title}}" auto-height confirm-type="next"
+        bindinput="input_title" bindfocus="" bindconfirm="" bindblur="" class="textarea"></textarea>
+
+    <textarea placeholder="收货详情（选填）" model:value="{{content}}" auto-height confirm-type="next"
+        bindinput="input_content" bindfocus="" bindconfirm="" bindblur="" class="textarea"></textarea>
+
+    <input placeholder="请输入品牌(选填)" confirm-type="next"  model:value="{{brand}}" bindinput="input_brand"
+        bindblur="" bindfocus="" bindconfirm="" class="picker"></input>
+
+    <input placeholder="请输入价格(元)(选填)" confirm-type="next" type='digit' model:value="{{price}}" bindinput="input_price"
+        bindblur="" bindfocus="" bindconfirm="" class="picker"></input>
+    <view style='margin:20rpx;color:gray'>上传图片(选填)</view>
+    <view wx:if="{{!image}}" bindtap="bind_images">
+        <image class="image_not_upload" src="{{add_icon}}"/>
+    </view>
+    <view wx:else class="image_item_wrap" bindtap="bind_images">
+        <view class="image_item_wrap">
+            <image class="image_not_upload" src="{{image}}"/>
+        </view>
+    </view>
+    <button class="button" bindtap="bind_submit">
+        发布收货
+    </button>
+    <view style="height:100rpx">
+    </view>
+</view>
+
+<!-- 发布海淘助手出售信息 -->
+<view wx:if="{{list_key=='glist_sell_goods'}}">
+    <textarea placeholder="标题" model:value="{{title}}" auto-height confirm-type="next"
+        bindinput="input_title" bindfocus="" bindconfirm="" bindblur="" class="textarea"></textarea>
+
+    <textarea placeholder="出售详情详情（选填）" model:value="{{content}}" auto-height confirm-type="next"
+        bindinput="input_content" bindfocus="" bindconfirm="" bindblur="" class="textarea"></textarea>
+
+    <input placeholder="请输入品牌(选填)" confirm-type="next"  model:value="{{brand}}" bindinput="input_brand"
+        bindblur="" bindfocus="" bindconfirm="" class="picker"></input>
+
+    <input placeholder="请输入价格(元)(选填)" confirm-type="next" type='digit' model:value="{{price}}" bindinput="input_price"
+        bindblur="" bindfocus="" bindconfirm="" class="picker"></input>
+    <view style='margin:20rpx;color:gray'>上传图片(选填)</view>
+    <view wx:if="{{!image}}" bindtap="bind_images">
+        <image class="image_not_upload" src="{{add_icon}}"/>
+    </view>
+    <view wx:else class="image_item_wrap" bindtap="bind_images">
+        <view class="image_item_wrap">
+            <image class="image_not_upload" src="{{image}}"/>
+        </view>
+    </view>
+    <button class="button" bindtap="bind_submit">
+        发布信息
+    </button>
+    <view style="height:100rpx">
+    </view>
+</view>
+
+<!-- 发布礼品卡信息 -->
+<view wx:if="{{list_key=='glist_sell_card'}}">
+    <textarea placeholder="请输入卡片内容" model:value="{{title}}" auto-height confirm-type="next"
+        bindinput="input_title" bindfocus="" bindconfirm="" bindblur="" class="textarea"></textarea>
+
+    <textarea placeholder="出售详情详情（选填）" model:value="{{content}}" auto-height confirm-type="next"
+        bindinput="input_content" bindfocus="" bindconfirm="" bindblur="" class="textarea"></textarea>
+
+    <input placeholder="请输入品牌(选填)" confirm-type="next"  model:value="{{brand}}" bindinput="input_brand"
+        bindblur="" bindfocus="" bindconfirm="" class="picker"></input>
+
+    <input placeholder="请输入汇率(选填)" confirm-type="next" type='digit' model:value="{{price}}" bindinput="input_price"
+        bindblur="" bindfocus="" bindconfirm="" class="picker"></input>
+    <view style='margin:20rpx;color:gray'>上传图片(选填)</view>
+    <view wx:if="{{!image}}" bindtap="bind_images">
+        <image class="image_not_upload" src="{{add_icon}}"/>
+    </view>
+    <view wx:else class="image_item_wrap" bindtap="bind_images">
+        <view class="image_item_wrap">
+            <image class="image_not_upload" src="{{image}}"/>
+        </view>
+    </view>
+    <button class="button" bindtap="bind_submit">
+        发布信息
+    </button>
+    <view style="height:100rpx">
+    </view>
+</view>
+
+<!-- 发布拼单信息 -->
+<view wx:if="{{list_key=='glist_pindan'}}">
+    <textarea placeholder="请输入代刷/拼单信息" model:value="{{title}}" auto-height confirm-type="next"
+        bindinput="input_title" bindfocus="" bindconfirm="" bindblur="" class="textarea"></textarea>
+
+    <textarea placeholder="详情（选填）" model:value="{{content}}" auto-height confirm-type="next"
+        bindinput="input_content" bindfocus="" bindconfirm="" bindblur="" class="textarea"></textarea>
+
+    <input placeholder="请输入品牌(选填)" confirm-type="next"  model:value="{{brand}}" bindinput="input_brand"
+        bindblur="" bindfocus="" bindconfirm="" class="picker"></input>
+
+    <input placeholder="请输入价格(元)(选填)" confirm-type="next" type='digit' model:value="{{price}}" bindinput="input_price"
+        bindblur="" bindfocus="" bindconfirm="" class="picker"></input>
+    <view style='margin:20rpx;color:gray'>上传图片(选填)</view>
+    <view wx:if="{{!image}}" bindtap="bind_images">
+        <image class="image_not_upload" src="{{add_icon}}"/>
+    </view>
+    <view wx:else class="image_item_wrap" bindtap="bind_images">
+        <view class="image_item_wrap">
+            <image class="image_not_upload" src="{{image}}"/>
+        </view>
+    </view>
+    <button class="button" bindtap="bind_submit">
+        发布信息
+    </button>
+    <view style="height:100rpx">
+    </view>
+</view>
+
+<!-- 发布黑名单信息 -->
+<view wx:if="{{list_key=='glist_black_list'}}">
+    <textarea placeholder="请输入内容" model:value="{{title}}" auto-height confirm-type="next"
+        bindinput="input_title" bindfocus="" bindconfirm="" bindblur="" class="textarea"></textarea>
+
+    <textarea placeholder="详情（选填）" model:value="{{content}}" auto-height confirm-type="next"
+        bindinput="input_content" bindfocus="" bindconfirm="" bindblur="" class="textarea"></textarea>
+
+    <view style='margin:20rpx;color:gray'>上传图片(选填)</view>
+    <view wx:if="{{!image}}" bindtap="bind_images">
+        <image class="image_not_upload" src="{{add_icon}}"/>
+    </view>
+    <view wx:else class="image_item_wrap" bindtap="bind_images">
+        <view class="image_item_wrap">
+            <image class="image_not_upload" src="{{image}}"/>
+        </view>
+    </view>
+    <button class="button" bindtap="bind_submit">
+        发布信息
+    </button>
+    <view style="height:100rpx">
+    </view>
+</view>
+
+<!-- 发布折扣资讯 -->
+<view wx:if="{{list_key=='glist_goods_info'}}">
+    <textarea placeholder="折扣资讯标题" model:value="{{title}}" auto-height confirm-type="next"
+        bindinput="input_title" bindfocus="" bindconfirm="" bindblur="" class="textarea"></textarea>
+
+    <textarea placeholder="折扣资讯详情（选填）" model:value="{{content}}" auto-height confirm-type="next"
+        bindinput="input_content" bindfocus="" bindconfirm="" bindblur="" class="textarea"></textarea>
+
+    <input placeholder="相关品牌或商城(选填)" confirm-type="next"  model:value="{{brand}}" bindinput="input_brand"
+        bindblur="" bindfocus="" bindconfirm="" class="picker"></input>
+
+    <view style='margin:20rpx;color:gray'>上传图片(选填)</view>
+    <view wx:if="{{!image}}" bindtap="bind_images">
+        <image class="image_not_upload" src="{{add_icon}}"/>
+    </view>
+    <view wx:else class="image_item_wrap" bindtap="bind_images">
+        <view class="image_item_wrap">
+            <image class="image_not_upload" src="{{image}}"/>
+        </view>
+    </view>
+    <button class="button" bindtap="bind_submit">
+        发布出售
+    </button>
+    <view style="height:100rpx">
+    </view>
+</view>
+

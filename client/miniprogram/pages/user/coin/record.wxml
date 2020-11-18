@@ -1,0 +1,45 @@
+ <!--pages/user/help/help.wxml-->
+ <view class="contain">
+     <view class="title_wrap">
+         <view class="title_img_wrap">
+             <image class="title_img" src="{{user_image}}">
+             </image>
+         </view>
+         <view class="title_content_wrap">
+             <view class="title_content_text_intergal">当前金币：0元</view>
+         </view>
+     </view>
+
+     <view class="donothaveintergal" hover-class="none" hover-stop-propagation="false">
+         参与邀请好友、分享商品、组队抽奖、购买商品、观看激励视频广告、给好友点赞等活动均有一定概率掉落金币。金币可以在购买商品时抵扣现金。
+     </view>
+     <!-- <view class="signin_wrap">
+        <view class="signin_title">佣金规则</view>
+        <view>
+            <text>
+                
+            </text>
+        </view>
+     </view> -->
+
+     <!-- <view class="signin_wrap">
+         <view class="signin_title">佣金明细</view>
+         <view wx:for="{{wishlist}}" wx:key="wishkey">
+             <view class="task_subwrap" bindtap="bindNavToDetail" data-key="{{item.key}}"
+                 data-price="{{item.intergal_price}}">
+                 <view>
+                     <image src="{{item.image}}" class="image_goods"></image>
+                 </view>
+                 <view class="task_subwrap_wrap">
+                     <view class="task_subwrap_title">{{item.name}}</view>
+                     <view class="task_subwrap_title">{{item.content}}</view>
+                     <view class="task_subwrap_content">{{item.intergal_price}} 积分</view>
+                 </view>
+                 <view>
+                     <image src="/image/前进.png" class="image_arrow"></image>
+                 </view>
+             </view>
+         </view>
+     </view> -->
+     <view style="height:60rpx"></view>
+ </view>

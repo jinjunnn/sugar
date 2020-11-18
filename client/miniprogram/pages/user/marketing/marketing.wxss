@@ -1,0 +1,9 @@
+.tet{
+        padding: 0px;
+        width: 750rpx;
+        height: 1100rpx;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle
+    
+}

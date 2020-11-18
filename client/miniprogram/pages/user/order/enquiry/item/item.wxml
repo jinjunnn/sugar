@@ -1,0 +1,57 @@
+<view class="wrap" hover-class="none" hover-stop-propagation="false">
+    <view class="item">
+        <view class="sub_title" hover-class="none" hover-stop-propagation="false">
+            订单信息:{{order.list_id}}
+        </view>
+        <view class="sub_item" hover-class="none" hover-stop-propagation="false">
+            <view class="name" hover-class="none" hover-stop-propagation="false">
+                {{order.name}}
+            </view>
+        </view>
+        <view class="content" hover-class="none" hover-stop-propagation="false">
+            {{order.content}}
+        </view>
+        <view class="sub_item2" hover-class="none" hover-stop-propagation="false">
+            <view class="sub_left" hover-class="none" hover-stop-propagation="false">
+
+                <view class="card" hover-class="none" hover-stop-propagation="false">
+                    {{order.card}}
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+<view class="wrap" hover-class="none" hover-stop-propagation="false">
+    <view class="item">
+        <view class="sub_title" hover-class="none" hover-stop-propagation="false">
+            出价列表
+        </view>
+        <view class="" hover-class="none" hover-stop-propagation="false" wx:for="{{cards}}" wx:key="item">
+            <view class="sub_wrap2" hover-class="none" hover-stop-propagation="false">
+                <view class="sub_item2" hover-class="none" hover-stop-propagation="false">
+                    <view class="sub_left" hover-class="none" hover-stop-propagation="false">
+                        <view class="card" hover-class="none" hover-stop-propagation="false">
+                            用户昵称：{{item.name}}
+                        </view>
+                    </view>
+                    <view class="amount" hover-class="none" hover-stop-propagation="false">
+                        <button class="button" bindtap='bind_submit' data-key="{{item.key}}" data-index="{{index}}">
+                            同意TA
+                        </button>
+                    </view>
+                </view>
+                <view class="sub_item2" hover-class="none" hover-stop-propagation="false">
+                    <view class="sub_left" hover-class="none" hover-stop-propagation="false">
+                        <view class="card" hover-class="none" hover-stop-propagation="false">
+                            价格：{{item.amount}}
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+        </view>
+
+    </view>
+</view>

@@ -1,0 +1,218 @@
+<view>
+    <swiper indicator-dots="{{indicatorDots}}" style="width:750rpx; height:750rpx"
+            autoplay="{{autoplay}}" 
+            interval="{{interval}}" 
+            duration="{{duration}}">
+        <block wx:for="{{good.images}}">
+            <swiper-item>
+                <image src="{{item}}" mode="widthFix" style="width:750rpx; height:auto;" />
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <view class="good">
+        <view class="good_brand">{{good.brand}}</view>
+        <view class="good_name">{{good.name}}</view>
+        <view class="good_name">{{good.sub_name}}</view>
+        <view class="good_id" bindtap='copy' data-id="{{good.id}}">{{good.id}}</view>
+        <view class="good_price">{{good.price}}元</view>
+        <!-- <view class="good_note">说明：MISS SUGAR承诺100%正品 | 假一赔三 | 可自主选择第三方物流 | 官网或商超发货</view> -->
+    </view>
+    <view style="height:1rpx; background-color:#eee"></view>
+    <!-- 运费和税 -->
+    <view class="about_good_wrap">
+        <view class="about_good_title">运费和手续费</view>
+        <view class="about_good_content">
+            <text>
+                此次订单办理会员可减免运费<text
+                    style="color:#D54547">{{good.fee}}</text>元，减免手续费<text
+                        style="color:#D54547">{{good.commission}}</text>元。
+                办理会员可享受运费和手续费，单笔订单最高减免30元运费和200元税。2019年7月1日-12月31日期间仅需<text
+                    style="color:#D54547">9.9元</text>即可办理会员，2020年恢复199.9元会员费价格。
+            </text>
+        </view>
+    </view>
+    <!-- 关于商品 -->
+    <view class="about_good_wrap">
+        <view class="about_good_title">关于商品</view>
+        <view class="about_good_content">
+            <text>
+                [正品保障]
+                SUGAR全球快闪店与“中检集团鉴奢中心”合作鉴定正品商品。合作鉴定的商品价值已经超过695万。鉴定的商品都配有官方“检验证书”，鉴定结果权威、有效。SUGAR全球快闪店承诺所有商品均采购正规门店，推荐用户自选物流地址，商品全部由官网、商超、专柜发货。郑重承诺100%保证专柜正品！支持鉴定验货。发现假货立即补发三件正品并赔偿1000元现金。
+            </text>
+        </view>
+        <view class="about_good_content" wx:if="{{good.reason}}">
+            <text>
+                [推荐理由]
+                {{good.reason}}
+            </text>
+        </view>
+    </view>
+    <!-- 分享优惠 -->
+    <view style="height:1rpx; background-color:#eee"></view>
+    <view class="images_title" wx:if="{{good.commission}}">分享优惠</view>
+    <view style="margin:20rpx;">
+        <view class="about_good_content" wx:if="{{good.share_discount}}">
+            <text>
+                [分享优惠]
+                次商品参与社交分享优惠活动，您将本商品分享给好友，好友购买完成后您和好友均会获得<text
+                    style="color:#D54547">{{good.commission}}元</text>现金红包，奖励直接发放到您和好友的微信余额中。
+            </text>
+        </view>
+    </view>
+    <!-- 产品详情 -->
+    <view style="height:1rpx; background-color:#eee"></view>
+    
+    <view class="images_title">产品详情</view>
+    <view style="margin:20rpx;">
+        <view class="about_good_content" wx:if="{{good.content}}">
+            <text>
+                [产品详情]
+                {{good.content}}
+            </text>
+        </view>
+    </view>
+
+    <view wx:for="{{good.images}}" wx:key="item">
+        <image src="{{item}}" style="width:750rpx;" mode="widthFix"></image>
+    </view>
+    <view wx:key="item" wx:if="{{good.details}}">
+        <image src="{{good.details}}" style="width:750rpx;" mode="widthFix"></image>
+    </view>
+    <view  wx:key="item" wx:if="{{good.infors}}">
+        <image src="{{good.infors}}" style="width:750rpx;" mode="widthFix"></image>
+    </view>
+    <view style="height:1rpx; background-color:#eee"></view>
+
+    <!-- 购买须知 -->
+    <view class="images_title">购买须知</view>
+    <view class="good_notice_wrap">
+        <view class="good_notice_sub_wrap">
+            <view class="good_notice_content_wrap">
+                <image class="good_notice_content_image" src="{{align_icon}}"></image>
+                <view class="good_notice_content_text">有小票/采购单照片</view>
+            </view>
+            <view class="good_notice_content_wrap">
+                <image class="good_notice_content_image" src="{{align_icon}}"></image>
+                <view class="good_notice_content_text">有原包装</view>
+            </view>
+            <view class="good_notice_content_wrap">
+                <image class="good_notice_content_image" src="{{align_icon}}"></image>
+                <view class="good_notice_content_text">货源来自商超/专营店</view>
+            </view>
+            <view class="good_notice_content_wrap">
+                <image class="good_notice_content_image" src="{{align_icon}}"></image>
+                <view class="good_notice_content_text">现货</view>
+            </view>
+            <view class="good_notice_content_wrap">
+                <image class="good_notice_content_image" src="{{align_icon}}"></image>
+                <view class="good_notice_content_text">所有官方安全标签齐全</view>
+            </view>
+            <view class="good_notice_content_wrap">
+                <image class="good_notice_content_image" src="{{wrong_icon}}"></image>
+                <view class="good_notice_content_text">支持7天无理由退换/30天有理由退换货</view>
+            </view>
+        </view>
+    </view>
+    <view style="height:1rpx; background-color:#eee"></view>
+    <!-- 其他说明 -->
+    <view class="about_good_wrap">
+        <view class="about_good_title">更多商品资讯</view>
+        <view class="about_good_content">
+            <text>
+                更多商品以及折扣信息请点击”咨询“按钮与客服联系
+            </text>
+        </view>
+    </view>
+    <view style="height:1rpx; background-color:#eee"></view>
+    <!-- 其他说明 -->
+    <view class="about_good_wrap">
+        <view class="about_good_title">其他说明</view>
+        <view class="about_good_content" if="{{good.remark}}">
+            <text>
+                [其他说明]
+                {{good.remark}}
+            </text>
+        </view>
+    </view>
+    <view style="height:1rpx; background-color:#eee"></view>
+</view>
+
+<view class="button_border"></view>
+<view class="button_wrap">
+    <view class="left_wrap">
+        <view class="left_item" bindtap="qr_code" data-key="{{good.key}}">
+            <image src="{{home_page}}" class="bottom_image" ></image>
+            <view class="bottom_text">生成图片</view>
+        </view>
+        <button class="left_item" bindtap="share" open-type="share">
+            <image src="{{share_icon}}" class="bottom_image"></image>
+            <view class="bottom_text">分享</view>
+        </button>
+        <button class="left_item" bindtap="custom" open-type="contact">
+            <image src="{{custom_icon}}" class="bottom_image"></image>
+            <view class="bottom_text">咨询</view>
+        </button>
+    </view>
+    <form bindsubmit="formSubmit" report-submit="true" report-submit-timeout="300">
+        <button formType="submit" class="btn_submit_right" bindgetuserinfo="bindgetuserinfo"
+            bindtap="bind_buy">立即购买</button>
+    </form>
+</view>
+<view class="bottom_other"></view>
+<view class="bottom"></view>
+
+
+<!-- 这里是微信底部弹出框的代码 -->
+<view class="{{backgroundColor}}" catchtouchmove="true">
+    <view class="commodity_screen" wx:if="{{showModalStatus}}">
+        <view
+            style="height:80rpx; display: -webkit-flex; justify-content:space-between; border-bottom-style:solid; border-color:#eee; border-width:1rpx;">
+            <view style="margin:28rpx; font-size: 24rpx;">总价：￥<text
+                    style="color:#D54547">{{good.price*amount}}</text>
+            </view>
+            <view bindtap="hideModal">
+                <image src="{{close_icon}}" style="width:30rpx; height:30rpx; margin:30rpx"></image>
+            </view>
+        </view>
+        <view style="height:200rpx; display: -webkit-flex;">
+            <view>
+                <image src="{{good.images[0]}}" style="width:160rpx; height:160rpx; margin:20rpx"></image>
+            </view>
+            <view style="font-size:24rpx; margin:60rpx 60rpx 30rpx 10rpx">{{good.name}}</view>
+        </view>
+
+        <view class="sku_wrap" wx:for="{{good.sku}}" wx:for-item="label" wx:for-index="label_index">
+            <view class="sku_label">{{label.label}}</view>
+            <view class="sku_desc_wrap">
+                <view wx:for="{{label.values}}" wx:for-item="desc" wx:for-index="desc_index">
+                    <view class="sku_desc_item_choosed" wx:if="{{desc_index == choosed[label_index]}}">
+                        {{desc.desc}}
+                    </view>
+                    <view class="sku_desc_item" wx:else bindtap="bind_change_desc" data-label_index="{{label_index}}"
+                        data-desc_index="{{desc_index}}">
+                        {{desc.desc}}
+                    </view>
+                </view>
+
+            </view>
+        </view>
+        <view class="amount_wrap">
+            <view class="amount_title">数量</view>
+            <view class="amount">
+                <view style="height:58rpx; width:58rpx; border-right-style:solid; border-color:#eee; border-width:1rpx;"
+                    bindtap="absAmount">
+                    <image src="{{minus_icon}}" style="width:30rpx; height:30rpx; margin:15rpx"></image>
+                </view>
+                <view style="width:120rpx; height:58rpx; text-align:center; color:#111; font-size:24rpx; margin:14rpx;">
+                    <text>{{amount}}</text>
+                </view>
+                <view style="height:58rpx; width:58rpx; border-left-style:solid; border-color:#eee; border-width:1rpx;"
+                    bindtap="addAmount">
+                    <image src="{{add_icon}}" style="width:30rpx; height:30rpx; margin:15rpx"></image>
+                </view>
+            </view>
+        </view>
+        <button bindtap="bind_submit" class="btn_sure">立即购买</button>
+    </view>
+</view>

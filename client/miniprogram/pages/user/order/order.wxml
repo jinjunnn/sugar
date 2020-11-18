@@ -1,0 +1,37 @@
+<view class="wrap" >
+    <view wx:for="{{list}}" wx:for-item="item" wx:for-index="label_index">
+        <view class="item_wrap">
+            <image class="item_image" src="{{item.attributes.image}}"></image>
+            <view class="item_content">
+                <view class="item_content_name">{{item.attributes.productDescription}}</view>
+                <view class="item_content_subwrap">
+                    <view class="sku_wrap">
+                        <view wx:for="{{item.attributes.sku}}" wx:key="item">
+                            <view class="sku_item_wrap">
+                                <view class="sku_item">{{item.label}}:{{item.desc}}</view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="item_content_price"> × {{item.attributes.piece}} </view>
+                </view>
+            </view>
+        </view>
+        <view class="pay_wrap">
+            <view class="pay_left_part">
+                <image class="pay_left_part_icon" src="{{zheng_icon}}"></image>
+                <view class="pay_left_part_text">正品保证</view>
+                <image class="pay_left_part_icon" src="{{red_arror_icon}}"></image>
+            </view>
+            <view class="pay_right_part">
+                <view class="pay_right_part_total">共{{item.attributes.piece}}件 付款额：<text
+                        style="color:#D54547">{{item.attributes.amount/100}}</text></view>
+                <view class="button_buy" bindtap="button_complete" data-objectid="{{item.id}}" wx:if="{{item.attributes.status=='SUCCESS'}}">海淘中</view>
+                <view class="button_buy" bindtap="button_complete" data-objectid="{{item.id}}" wx:if="{{item.attributes.status=='TRANS_THREE_PART'}}">发货至中转仓</view>
+                <view class="button_buy" bindtap="button_complete" data-objectid="{{item.id}}" wx:if="{{item.attributes.status=='TRANS_TO_CHINA'}}">国际物流</view>
+                <view class="button_buy" bindtap="button_complete" data-objectid="{{item.id}}" wx:if="{{item.attributes.status=='TRANS_TO_DOOR'}}">国内快递</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view style="height:60rpx"></view>
+

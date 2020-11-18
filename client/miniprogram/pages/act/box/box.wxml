@@ -1,0 +1,55 @@
+<view class='wrap' wx:if="{{display == 'load'}}">
+    <view class="box" hover-class="none" hover-stop-propagation="false">
+        <image class="banner" src="{{infors.image}}" mode="aspectFill" lazy-load="false" binderror="" bindload="">
+        </image>
+        <view class="box_item" hover-class="none" hover-stop-propagation="false" >
+            <view class="box_item_wrap" hover-class="none" hover-stop-propagation="false" wx:for="{{box.status}}"
+                wx:key='item'>
+                <view class="" hover-class="none" hover-stop-propagation="false" bindtap="bind_notice"
+                    wx:if="{{item == '1'}}">
+                   <image class="box_item_detail" src="{{sold_out}}" mode="aspectFill"
+                       lazy-load="false" binderror="" bindload="" ></image>
+                </view>
+                <view class="" hover-class="none" hover-stop-propagation="false" bindtap="bind_buy"
+                    wx:elif="{{item == '0'}}" data-index="{{index}}" data-actkey="{{infors.key}}"
+                    data-itemkey="{{box.key}}">
+                   <image class="box_item_detail" src="{{infors.icon}}" mode="aspectFill"
+                       lazy-load="false" binderror="" bindload="" ></image>
+                </view>
+
+            </view>
+            <view class="box_content" hover-class="none" hover-stop-propagation="false">
+                <text class="" selectable="false" space="false" decode="false">请选择一个盲盒
+                    盒号:{{box.id}}
+                </text>
+            </view>
+        </view>
+    </view>
+
+    <view class="user" hover-class="none" hover-stop-propagation="false" wx:if="{{user}}">
+        <image class="user_image" src="{{user.image}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+            
+        </image>
+        <view class="user_content" hover-class="none" hover-stop-propagation="false">
+            正在选盒中
+        </view>
+    </view>
+
+    <view class="button" hover-class="none" hover-stop-propagation="false">
+        <button class="button_left"  bindtap="bind_change">
+            换一盒
+        </button>
+        <button class="button_right" bindtap="bind_choose">
+            打开新盒
+        </button>
+    </view>
+
+    <view class="detail" >
+        <view class="image_details" hover-class="none" hover-stop-propagation="false">
+            <text>礼盒说明：
+                {{infors.details}}</text>
+        </view>
+        <image class="iamge_detail" src="{{infors.detail}}" mode="widthFix" lazy-load="false" binderror="" bindload="">
+        </image>
+    </view>
+</view>

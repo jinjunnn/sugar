@@ -1,0 +1,46 @@
+<!-- 未获取到数据显示空白 -->
+<view wx:if="{{display==false}}">
+
+</view>
+<view wx:else>
+    <view class="contain">
+        <view class="title_wrap">
+            <view class="title_img_wrap">
+                <image class="title_img" src="{{user_image}}">
+                </image>
+            </view>
+            <view class="title_content_wrap">
+                <view class="title_content_text_intergal">{{wish}}心愿</view>
+                <view class="donothaveintergal" hover-class="none" hover-stop-propagation="false">
+                    参与组队抽奖、点赞、观看激励视频广告活动可以获得心愿。
+                </view>
+            </view>
+        </view>
+
+
+        <!-- <view class="signin_wrap">
+            <view class="signin_title">佣金规则</view>
+            <view>
+                <text>
+                    
+                </text>
+            </view>
+        </view> -->
+
+        <view class="signin_wrap">
+            <view class="signin_title">心愿明细</view>
+            <view wx:for="{{record}}" wx:key="wishkey">
+                <view class="task_subwrap_wrap">
+                    <view class="task_subwrap_title">{{item.content}}</view>
+                    <view class="task_subwrap_title" wx:if="{{item.type =='out'}}"><text class="task_subwrap_price1">{{item.amount}}</text>心愿
+                    </view>
+                    <view class="task_subwrap_title" wx:elif="{{item.type == 'in'}}"><text class="task_subwrap_price2"
+                            >{{item.amount}}</text>心愿
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <view style="height:60rpx"></view>
+    </view>
+</view>

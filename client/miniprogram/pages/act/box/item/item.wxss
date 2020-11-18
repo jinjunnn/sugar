@@ -1,0 +1,154 @@
+/* pages/act/box/item/item.wxss */
+
+
+page {
+    background-color: #1eb6a7;
+}
+
+.image_wrap{
+    margin:12vh 195rpx 10vh 195rpx;
+}
+
+.iamge{
+    width:360rpx;
+    height: 540rpx;
+    border-radius: 20rpx;
+}
+
+.button {
+    display: -webkit-flex;
+    justify-content: center;
+    width: 750rpx;
+    padding-top:60rpx;
+    flex-wrap: wrap;
+}
+
+.button_left {
+    width: 550rpx;
+    height: 90rpx;
+    background-color: #ffe650;
+    color: white;
+    font-size: 35rpx;
+    border-radius: 15rpx;
+}
+
+.text{
+    text-align: center;
+    font-size: 20rpx;
+    color: whitesmoke;
+    padding-top: 2vh;
+}
+
+.item_id{
+    text-align: center;
+    font-size: 20rpx;
+    color: whitesmoke;
+    padding-top: 2vh;
+}
+
+
+.modal_wrap{
+    margin:30rpx;
+    text-align: center;
+}
+
+.title{
+    font-size: 48rpx;
+}
+
+.sub_title{
+    font-size: 24rpx;
+    padding-bottom:2vh;
+}
+
+.model_image{
+    width:300rpx;
+    height: 300rpx;
+    border-radius: 5rpx;
+    border: 3rpx solid white;
+}
+
+.model_content{
+    font-size: 24rpx;
+}
+
+.modal_btn_wrap{
+    width:550rpx;
+    background-color: white;
+}
+
+.button_wrap{
+    display: -webkit-flex;
+    justify-content: space-between;
+    padding:60rpx 0rpx 40rpx 0rpx;
+}
+
+.left_button{
+    width:220rpx;
+    height: 70rpx;
+    background-color: #D54547;
+    color:white;
+    font-size: 28rpx;
+    border-radius: 35rpx;
+    border:1rpx solid #D54547;
+}
+
+.right_button{
+    width:220rpx;
+    height: 70rpx;
+    background-color: #ffe650;
+    color:white;
+    font-size: 28rpx;
+    border-radius: 35rpx;
+    border:1rpx solid #ffe650;
+}
+
+.heihei{
+    font-size: 24rpx;
+    color:black;
+    text-align: center;
+    padding-bottom: 40rpx;
+}
+
+.close_icon{
+    width: 40rpx;
+    height: 40rpx;
+}
+
+/* 以下是弹出框 */
+.commodity_screen {
+    background: #D54547;
+    color: #fff;
+    width:550rpx;
+    height: 700prx;
+    border-radius: 20rpx;
+    opacity: 1;
+    overflow: hidden;
+    z-index: 100100;
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    margin:0rpx 100rpx 0rpx 100rpx;
+}
+
+
+.bg_color {
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top:0;
+    left:0;
+    height: 10000rpx;
+}
+
+/* .wrap_show{
+    opacity: 1;
+}
+
+.wrap_notshow{
+    opacity: 0.6;
+    background: gray;
+
+} */

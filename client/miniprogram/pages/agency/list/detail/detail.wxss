@@ -1,0 +1,454 @@
+/*
+自定义底部弹出框           
+*/
+.commodity_screen {
+    width: 100%;
+    height: 75%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    opacity: 1;
+    overflow: hidden;
+    z-index: 6000;
+    color: #888888;
+}
+
+.bg_color {
+    position: absolute;
+    height: 10000rpx;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.btn_sure {
+    width: 700rpx;
+    height: 6.5%;
+    position: fixed;
+    bottom: 40rpx;
+    left: 25rpx;
+    background: #D54547;
+    opacity: 1;
+    border: none;
+    overflow: hidden;
+    z-index: 1002;
+    color: #fff;
+}
+
+/* pages/user/promotion_record/detail/detail.wxss */
+
+.wrap {
+    margin: 10rpx 40rpx 20rpx 40rpx;
+}
+
+.title {
+    font-size: 48rpx;
+    color: #D54547;
+}
+
+.title_sub {
+    font-size: 24rpx;
+}
+
+.content_box {
+    box-sizing: border-box;
+    width: 48.5%;
+    float: left;
+    height: 400rpx;
+    border: 1rpx solid #D54547;
+    margin: 30rpx 10rpx 30rpx 0rpx;
+}
+
+.box_image {
+    height: 45rpx;
+    width: 45rpx;
+    margin: 30rpx;
+}
+
+.box_title {
+    margin: 0rpx 30rpx 30rpx 30rpx;
+    font-size: 24rpx;
+    color: #b0b0b0;
+}
+
+.box_content {
+    font-size: 24rpx;
+    margin: 0rpx 30rpx 30rpx 30rpx;
+    height: 110rpx;
+}
+
+.box_button {
+    text-align: center;
+    width: 270rpx;
+    height: 60rpx;
+    font-size: 24rpx;
+    background-color: #D54547;
+    color: white;
+}
+
+.lottery_notice_sub_title {
+    font-weight: bold;
+    font-size: 24rpx;
+    padding-bottom: 10rpx;
+}
+
+.lottery_notice {
+    width: 710rpx;
+    font-size: 28rpx;
+}
+
+.codewrap {
+    display: -webkit-flex;
+    justify-content: space-between;
+
+}
+
+.codesubwrap {
+    height: 200rpx;
+    border: 1rpx solid #ccc;
+    border-radius: 5rpx;
+    width: 140rpx;
+    margin: 10rpx;
+}
+
+.puke_icon {
+    height: 30rpx;
+    width: 30rpx;
+    margin-left: 5rpx;
+}
+
+.puke_icon_right {
+    height: 30rpx;
+    width: 30rpx;
+    text-align: right;
+    transform: rotate(180deg);
+    margin-left: 105rpx;
+}
+
+.sub_button {
+    position: absolute;
+    bottom: 60rpx;
+    width: 670rpx;
+}
+
+.sub_button_not_get {
+    position: absolute;
+    bottom: 120rpx;
+    font-size: 28rpx;
+    text-align: center;
+    width: 670rpx;
+}
+
+.sub_text_not_get {
+    position: absolute;
+    bottom: 70rpx;
+    font-size: 28rpx;
+    text-align: center;
+    width: 670rpx;
+}
+
+/* 自定义顶部 */
+.inaver._30f2b4d {
+    box-sizing: border-box;
+    padding-top: 44rpx;
+    width: 100vw;
+    height: 160rpx;
+    display: flex;
+    position: fixed;
+    z-index: 5000;
+    top: 0;
+    left: 0;
+}
+
+.inaver .left._30f2b4d {
+    width: 240rpx;
+    height: 100rpx;
+    margin: 8rpx;
+}
+
+.inaver .left image.icon._30f2b4d {
+    width: 40rpx;
+    height: 40rpx;
+    padding: 20rpx;
+    margin: 20rpx;
+}
+
+.inaver .center._30f2b4d {
+    height: 100rpx;
+    line-height: 100rpx;
+    flex: 1;
+    margin: 20rpx;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 36rpx;
+}
+
+.inaver .right._30f2b4d {
+    width: 240rpx;
+    height: 100rpx;
+    margin: 8rpx;
+}
+
+.protect-inaver._30f2b4d {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 160rpx;
+}
+
+.images_title {
+    font-size: 40rpx;
+    margin: 20rpx;
+}
+
+.good_tag {
+    margin: 25rpx;
+    text-align: center;
+    background-color: #D54547;
+    color: #fff;
+    font-size: 28rpx;
+    padding: 5rpx;
+    border-radius: 30rpx;
+    position: relative;
+    top: -120rpx;
+}
+
+.good {
+    margin: 20rpx;
+    padding: 0rpx 20rpx 30rpx 20rpx;
+    font-size: 28rpx;
+    text-align: center;
+}
+
+.good_note {
+    text-align: left;
+    color: #888888;
+    font-size: 24rpx;
+}
+
+.good_price {
+    color: #D54547;
+    font-size: 40rpx;
+    text-align: center;
+    padding-bottom: 40rpx;
+}
+
+.good_brand {
+    padding-bottom: 10rpx;
+}
+
+.good_name {
+    padding-bottom: 10rpx;
+}
+.good_id{
+    color: gray;
+    padding-bottom: 10rpx;
+}
+
+.about_good_wrap {
+    margin: 20rpx;
+}
+
+.about_good_title {
+    font-size: 40rpx;
+}
+
+.about_good_content {
+    color: #888888;
+    font-size: 24rpx;
+}
+
+.good_notice_wrap {
+    margin: 20rpx;
+    background-color: #f6f6f6;
+    font-size: 24rpx;
+}
+
+.good_notice_sub_wrap {
+    padding: 30rpx;
+}
+
+.good_notice_content_wrap {
+    display: -webkit-flex;
+    padding-bottom: 30rpx;
+}
+
+.good_notice_content_image {
+    width: 24rpx;
+    height: 24rpx;
+    padding: 6rpx 60rpx 0rpx 40rpx;
+}
+
+.good_notice_content_text {
+    font-size: 24rpx;
+}
+
+
+.left_wrap {
+    background-color: #FFFFFF;
+    border: none;
+    position: fixed;
+    bottom: 59rpx;
+    height: 100rpx;
+    width: 550rpx;
+    z-index: 5000;
+}
+
+.btn_submit_middle {
+    background-color: #D54547;
+    color: white;
+    position: fixed;
+    bottom: 60rpx;
+    left: 348rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    width: 200rpx;
+    border-radius: 0rpx;
+    z-index: 5000;
+    border: 0;
+}
+
+.btn_submit_right {
+    background-color: #D54547;
+    color: white;
+    position: fixed;
+    bottom: 60rpx;
+    left: 550rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    width: 200rpx;
+    border-radius: 0rpx;
+    z-index: 5000;
+    border: 0;
+}
+
+
+.left_wrap {
+    display: -webkit-flex;
+    text-align: center;
+
+}
+
+.button_border {
+    height: 1rpx;
+    background-color: #eee;
+    width: 750rpx;
+    position: fixed;
+    bottom: 161rpx;
+    z-index: 5005;
+}
+
+/* 清除button的预设 */
+.left_item::after {
+    border: none;
+}
+
+/* 清楚button的预设 */
+.left_item {
+    width: 120rpx;
+    background-color: #fff;
+    border-radius: 0;
+    padding-left: 0;
+    padding-top: 10rpx;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    line-height: 0;
+}
+
+.bottom_image {
+    width: 45rpx;
+    height: 45rpx;
+}
+
+/* 清楚button的预设 */
+.bottom_text::after {
+    border: none;
+}
+
+/* 清楚button的预设 */
+.bottom_text {
+    background-color: #fff;
+    border-radius: 0;
+    line-height: 1.55555556;
+    padding-top: 0rpx;
+    font-size: 24rpx;
+    color: #bfbfbf;
+}
+
+.bottom_text_button {
+    font-size: 28rpx;
+    border: 0;
+    background-color: #FFFFFF;
+    size: mini;
+    padding: 0;
+}
+
+.bottom {
+    position: fixed;
+    height: 60rpx;
+    bottom: 0;
+    z-index: 5000;
+    background-color: #FFFFFF;
+    width: 750rpx;
+}
+
+.bottom_other {
+    height: 200rpx;
+    width:100%;
+}
+
+.amount {
+    margin: 10rpx 50rpx 10rpx 20rpx;
+    height: 60rpx;
+    width: 240rpx;
+    border-style: solid;
+    border-color: #eee;
+    border-width: 1rpx;
+    border-radius: 4rpx;
+    display: -webkit-flex;
+}
+
+.sku_wrap {
+    margin: 10rpx 30rpx 10rpx 50rpx;
+}
+
+.sku_label {
+    font-size: 28rpx;
+}
+
+.sku_desc_wrap {
+    display: -webkit-flex;
+}
+
+.sku_desc_item_choosed {
+    color: #D54547;
+    border: 1rpx solid #D54547;
+    padding: 10rpx 30rpx 10rpx 30rpx;
+    border-radius: 50rpx;
+    margin: 10rpx 20rpx 10rpx 0rpx;
+}
+
+.sku_desc_item {
+    color: #888888;
+    border: 1rpx solid #888888;
+    padding: 10rpx 30rpx 10rpx 30rpx;
+    border-radius: 50rpx;
+    margin: 10rpx 20rpx 10rpx 0rpx;
+}
+
+.amount_wrap {
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+
+.amount_title {
+    font-size: 28rpx;
+    margin: 20rpx 10rpx 10rpx 50rpx;
+}

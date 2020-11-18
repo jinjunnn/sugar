@@ -1,0 +1,198 @@
+/* pages/order/order.wxss */
+
+
+.address_wrap {
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+
+.address_text_wrap {
+    margin: 30rpx;
+}
+
+.address_title {
+    font-size: 28rpx;
+}
+
+.address_detail {
+    font-size: 24rpx;
+}
+
+.arror_icon {
+    margin: 60rpx 30rpx 30rpx 30rpx;
+    width: 45rpx;
+    height: 45rpx;
+}
+
+/* 间距 */
+.gap {
+    height: 20rpx;
+    width: 100%;
+    background-color: #f0f0f0;
+}
+
+.bottom {
+    height: 150rpx;
+    width: 100%;
+}
+
+.product_wrap {
+    margin: 40rpx 30rpx 30rpx 30rpx;
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+
+.product_image {
+    width: 160rpx;
+    height: 160rpx;
+}
+
+.text_wrap {
+    width: 530rpx;
+    height: auto;
+}
+
+.text_title {
+    font-size: 28rpx;
+}
+
+.price_wrap {
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+
+.product_price {
+    font-size: 28rpx;
+    color: #D54547;
+}
+
+.product_amount {
+    font-size: 28rpx;
+}
+
+.fee_wrap {
+    margin: 30rpx;
+}
+
+.item_wrap {
+    display: -webkit-flex;
+    justify-content: space-between;
+    padding: 20rpx 0rpx 20rpx 0rpx;
+    border-bottom: 1rpx solid rgba(7, 17, 27, 0.1);
+}
+
+.item_wrap_bottom {
+    display: -webkit-flex;
+    justify-content: space-between;
+    padding: 20rpx 0rpx 20rpx 0rpx;
+}
+
+.fee_text {
+    font-size: 28rpx;
+}
+
+.fee_text_dis {
+    font-size: 28rpx;
+    width: 250rpx;
+}
+
+.detail_wrap {
+    width: 160rpx;
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+
+.detail_text {
+    font-size: 28rpx;
+    color: #b0b0b0;
+}
+
+.detail_icon {
+    width: 45rpx;
+    height: 45rpx;
+}
+
+.other_remark {
+    width: 560rpx;
+    font-size: 24rpx;
+    padding-left: 10rpx;
+}
+
+.other_remark_dis {
+    width: 560rpx;
+    font-size: 24rpx;
+    padding-left: 10rpx;
+    display: -webkit-flex;
+}
+
+.other_title {
+    width: 130rpx;
+    font-size: 28rpx;
+}
+
+.other_remark_dis {
+    font-size: 24rpx;
+    color: #b0b0b0;
+
+}
+
+.btn_submit_right {
+    background-color: #D54547;
+    color: white;
+    position: fixed;
+    bottom: 60rpx;
+    left: 500rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    width: 250rpx;
+    border-radius: 0rpx;
+    z-index: 5000;
+    border: 0;
+}
+
+.button_price {
+    width: 500rpx;
+    background: white;
+    z-index: 5000;
+    position: fixed;
+    bottom: 60rpx;
+    height: 80rpx;
+    color: black;
+    font-size: 28rpx;
+
+}
+
+.button_price_text {
+    margin: 22rpx 30rpx 22rpx 30rpx;
+}
+
+.button_wrap {
+    display: -webkit-flex;
+    z-index: 5005;
+    width: 100%;
+}
+
+.order_price {
+    font-size: 36rpx;
+    color: #D54547;
+
+}
+
+.bottom_fix {
+    position: fixed;
+    height: 60rpx;
+    bottom: 0;
+    z-index: 5000;
+    background-color: #FFFFFF;
+    width: 750rpx;
+}
+
+.sku_item_wrap {
+    display: -webkit-flex;
+}
+
+.sku_item {
+    font-size: 24rpx;
+    color: #b0b0b0;
+    padding: 10rpx;
+}

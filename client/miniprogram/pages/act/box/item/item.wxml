@@ -1,0 +1,85 @@
+
+
+
+<!-- 这里是微信底部弹出框的代码 
+这部分代码一定要放在最上面
+
+-->
+<view class="{{backgroundColor}}" catchtouchmove="true">
+    <view class="commodity_screen" wx:if="{{showModalStatus}}" touchmove="hideModal">
+        <view class="modal_wrap" hover-class="none" hover-stop-propagation="false">
+            <view class="title" hover-class="none" hover-stop-propagation="false">
+                开盒结果
+            </view>
+            <view class="sub_title" hover-class="none" hover-stop-propagation="false">
+                {{infors[lucky_code]}}
+            </view>
+            <view class="" hover-class="none" hover-stop-propagation="false">
+                <image class="model_image" src="{{infors[lucky_code + '_image']}}" mode="aspectFill" lazy-load="true"
+                    binderror="" bindload="">
+
+                </image>
+                <view class="model_content" hover-class="none" hover-stop-propagation="false">
+                    盲盒名称:{{infors.title}}
+                </view>
+                
+            </view>
+        </view>
+        <view class="modal_btn_wrap" hover-class="none" hover-stop-propagation="false">
+            <view class="button_wrap" hover-class="none" hover-stop-propagation="false">
+                <button class="left_button" bindtap = "bind_close">
+                    继续拆盒
+                </button>
+                <button class="right_button" open-type="share" bindtap="bind_chick">
+                    查看奖品
+                </button>
+            </view>
+            <view class="heihei" hover-class="none" hover-stop-propagation="false">
+                拆盒一时爽！一直拆盒一直爽！
+            </view>
+        </view>
+    </view>
+</view>
+
+
+<!--pages/act/box/item/item.wxml-->
+<view class="{{wrap}}" hover-class="none" hover-stop-propagation="false">
+    
+
+    <view class="image_wrap" hover-class="none" hover-stop-propagation="false">
+        <image class="iamge" src="{{infors.image}}" mode="aspectFill" lazy-load="false" binderror="" bindload="">
+            
+        </image>
+        <view class="item_id" hover-class="none" hover-stop-propagation="false">
+            <view class="" selectable="false" space="false" decode="false">
+                <text class="" selectable="false" space="false" decode="false">盒号：{{item_id}}</text>
+                <text class="" selectable="false" space="false" decode="false" wx:if="{{infors.currency == 'cash'}}">
+                    盲盒价格:{{infors.price}}元
+                </text>
+                <text class="" selectable="false" space="false" decode="false" wx:else>
+                    本次盲盒抽奖将消耗:{{infors.price}}心愿
+                </text>
+            </view>
+            
+        </view>
+
+    </view>
+
+    <view class="button" hover-class="none" hover-stop-propagation="false">
+        <button class="button_left" bindtap="bind_buy">
+            就买它
+        </button>
+        <view class="text" hover-class="none" hover-stop-propagation="false">
+            <text class="" selectable="false" space="false" decode="false">实物商品全场满3个包邮(0元商品除外),不足3个将收取一定运费！
+                盲盒类商品拆盒后(含在线拆盒)不支持7天无理由退货！
+            </text>
+            
+        </view>
+    </view>
+</view>
+
+
+
+
+
+

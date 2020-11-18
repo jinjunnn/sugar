@@ -1,0 +1,10 @@
+<view class="good_wrap">
+    <view class="good">
+        <view class="good_brand">{{good.title}}</view>
+        <view class="good_name">{{good.content}}</view>
+        <view class="good_price">￥{{good.price}}元</view>
+    </view>
+    <image src="{{good.image}}" mode="aspectFill" class="image" />
+    <image src='data:image/png;base64,{{qr_code}}' class="good_qrcode" />
+    <view class="sub_text">安利一个好东西,扫码登录SUGAR全球快闪店购买~~~</view>
+</view>

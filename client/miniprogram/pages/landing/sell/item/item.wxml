@@ -1,0 +1,139 @@
+
+
+<view>
+    <!-- 商品主图以及商品简 -->
+    <view style="width:750rpx; height:750rpx">
+        <image src="{{good.image}}" style="width:750rpx; height:750rpx;"></image>
+    </view>
+
+    <!-- 商品以轮播图的形式展现 -->
+    <!-- <swiper indicator-dots="{{indicatorDots}}" style="width:750rpx; height:750rpx" autoplay="{{autoplay}}"
+        interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{good.images}}">
+            <swiper-item>
+                <image src="{{item}}" mode="widthFix" style="width:750rpx; height:auto;" />
+            </swiper-item>
+        </block>
+    </swiper> -->
+
+    <view class="good">
+        <view class="good_brand">{{good.brand}}</view>
+        <view class="good_name">{{good.name}}</view>
+        <view class="good_id" bindtap='copy' data-id="{{good.id}}">{{good.id}}</view>
+        <view class="good_price">{{good.price}}元</view>
+        <!-- <view class="good_note">说明：MISS SUGAR承诺100%正品 | 假一赔三 | 可自主选择第三方物流 | 官网或商超发货</view> -->
+    </view>
+    <view style="height:1rpx; background-color:#eee"></view>
+    <!-- 运费和税 -->
+    <view class="about_good_wrap">
+        <view class="about_good_title">产品详情</view>
+        <view class="about_good_content">
+            <text>产品简介：
+                {{good.content}}</text>
+        </view>
+        <view class="about_good_content" wx:if="{{good.size}}">
+            <text>
+                产品规格：
+                {{good.size}}</text>
+        </view>
+        <!-- <view class="about_good_content" wx:if="{{good.etb}}">
+            <text>
+                预计采购时间：
+                {{good.etb}}</text>
+        </view> -->
+    </view>
+    <view style="height:1rpx; background-color:#eee"></view>
+    <image src="{{good.image}}" style="width:750rpx;" mode="widthFix" wx:if="{{good.image}}"></image>
+    <view wx:for="{{good.images}}" wx:key="item" wx:if="{{good.images}}">
+        <image src="{{item}}" style="width:750rpx;" mode="widthFix"></image>
+    </view>
+    <view style="height:1rpx; background-color:#eee" wx:if="{{good.images}}"></view>
+    <!-- 关于商品 -->
+    <view class="about_good_wrap">
+        <view class="about_good_title">关于代购商品</view>
+        <view class="about_good_content">
+            <text>{{about_shop}}
+            </text>
+        </view>
+    </view>
+</view>
+
+<view class="button_border"></view>
+<view class="button_wrap">
+    <view class="left_wrap">
+        <view class="left_item" bindtap="qr_code" data-key="{{good.key}}">
+            <image src="{{home_page}}" class="bottom_image"></image>
+            <view class="bottom_text">生成图片</view>
+        </view>
+        <button class="left_item" bindtap="share" open-type="share">
+            <image src="{{share_icon}}" class="bottom_image"></image>
+            <view class="bottom_text">分享</view>
+        </button>
+        <button class="left_item" bindtap="custom" open-type="contact">
+            <image src="{{custom_icon}}" class="bottom_image"></image>
+            <view class="bottom_text">专属客服</view>
+        </button>
+    </view>
+    <button class="btn_submit_right" bindgetuserinfo="bindgetuserinfo" open-type="getUserInfo">立即购买</button>
+</view>
+<view class="bottom_other"></view>
+<view class="bottom"></view>
+
+
+<!-- 这里是微信底部弹出框的代码 -->
+<view class="{{backgroundColor}}" catchtouchmove="true">
+    <view class="commodity_screen" wx:if="{{showModalStatus}}">
+        <view
+            style="height:80rpx; display: -webkit-flex; justify-content:space-between; border-bottom-style:solid; border-color:#eee; border-width:1rpx;">
+            <view style="margin:28rpx; font-size: 24rpx;">总价：￥<text style="color:#D54547">{{good.price*amount}}</text>
+            </view>
+            <view bindtap="hideModal">
+                <image src="{{close_icon}}" style="width:30rpx; height:30rpx; margin:30rpx"></image>
+            </view>
+        </view>
+        <view style="height:200rpx; display: -webkit-flex;">
+            <view>
+                <image src="{{good.image}}" style="width:160rpx; height:160rpx; margin:20rpx"></image>
+            </view>
+            <view style="font-size:24rpx; margin:60rpx 60rpx 30rpx 10rpx">{{good.name}}</view>
+        </view>
+        <view class="amount_wrap">
+            <view class="amount_title">数量</view>
+            <view class="amount">
+                <view style="height:58rpx; width:58rpx; border-right-style:solid; border-color:#eee; border-width:1rpx;"
+                    bindtap="absAmount">
+                    <image src="{{minus_icon}}" style="width:30rpx; height:30rpx; margin:15rpx"></image>
+                </view>
+                <view style="width:120rpx; height:58rpx; text-align:center; color:#111; font-size:24rpx; margin:14rpx;">
+                    <text>{{amount}}</text>
+                </view>
+                <view style="height:58rpx; width:58rpx; border-left-style:solid; border-color:#eee; border-width:1rpx;"
+                    bindtap="addAmount">
+                    <image src="{{add_icon}}" style="width:30rpx; height:30rpx; margin:15rpx"></image>
+                </view>
+            </view>
+        </view>
+        <scroll-view scroll-y style="width: 670rpx; height: 300px;" >
+            <view class="sku_wrap" wx:if="{{good.sku[0]}}">
+                <view class="sku_desc_wrap" wx:for="{{good.sku}}" wx:for-item="sku" wx:for-index="label_index">
+                    <view class="sku_desc_item_choosed" wx:if="{{label_index == choosed}}">
+                        {{good.sku[label_index].name}}
+                    </view>
+                    <view class="sku_desc_item" wx:else bindtap="bind_change_desc" data-label_index="{{label_index}}">
+                        {{good.sku[label_index].name}}
+                    </view>
+                </view>
+            </view>
+            <view class="sku_wrap" wx:else>
+                <view class="sku_desc_wrap">
+                    <view class="sku_desc_item_choosed" wx:if="{{good.size}}">
+                        {{good.size}}
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+
+
+        <button bindtap="bind_submit" class="btn_sure">立即购买</button>
+    </view>
+</view>

@@ -1,0 +1,49 @@
+
+
+<!-- 渲染小程序码的代码 -->
+<!-- <image src='data:image/png;base64,{{qr_code}}' style="height:250rpx; width:250rpx;"/> -->
+<view>
+    <view wx:for="{{list}}" wx:key="item">
+        <navigator url="./list/list?list_id={{item.listing.list_id}}&shop_name={{item.listing.shop_name}}">
+            <view>
+                <!-- <image style="width: 750rpx;  background-color: #eeeeee;" mode="widthFix"
+                    src="{{item.listing.shop_images}}">
+                </image> -->
+                <view class="title_wrap" hover-class="none" hover-stop-propagation="false">
+                        <view class="" hover-class="none" hover-stop-propagation="false">
+                            <view class="name">{{item.listing.shop_name}}</view>
+                            <view class="subname"> {{item.listing.shop_desc}}</view>
+                        </view>
+                        <view style="padding-right: 10rpx;padding-top: 0rpx;" hover-class="none" hover-stop-propagation="false">
+                            <image style="width:70rpx; height:70rpx" src="{{arror_icon}}" mode="widthFix" lazy-load="false"
+                                binderror="" bindload="">
+                            </image>
+                        </view>
+                </view>
+                
+
+            </view>
+        </navigator>
+        <view class="itemwrap">
+            <scroll-view scroll-x="true" style="white-space:nowrap; width:750rpx">
+                <navigator wx:for="{{item.goods}}" wx:for-item="goods"
+                    style="display:inline-block; margin:0rpx 0rpx 0rpx 15rpx"
+                    url="./list/detail/detail?key={{goods.key}}">
+                    <view style="width: 270rpx; height: 270rpx; background-color: #eeeeee;">
+                        <image style="width: 270rpx; height: 270rpx; background-color: #eeeeee;" mode="aspectFill"
+                            src="{{goods.images[0]}}"></image>
+                    </view>
+                    <view class="itemname">{{goods.name}}</view>
+                    <view class="itemsubname">{{goods.sub_name}}</view>
+                    <view class="itemprice"> ￥{{goods.price}}元</view>
+                </navigator>
+                <navigator style="display:inline-block; margin:0rpx 0rpx 0rpx 15rpx;"
+                    url="./list/list?list_id={{item.listing.list_id}}&shop_name={{item.listing.shop_name}}">
+                    <view style="width: 270rpx; height: 270rpx; background-color: #ffffff;" mode="aspectFill"></view>
+                    <view class="itemnamemore">+{{item.length}}</view>
+                    <view class="itempricemore"> 查看更多单品</view>
+                </navigator>
+            </scroll-view>
+        </view>
+    </view>
+</view>

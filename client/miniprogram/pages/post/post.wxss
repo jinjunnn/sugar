@@ -1,0 +1,75 @@
+page {
+    /* background-color: #f0f0f0; */
+}
+
+.wrap {
+    margin: 20rpx;
+}
+
+.sub_wrap {
+    display: -webkit-flex;
+    margin: 30rpx;
+}
+
+.image_wrap {
+    margin: 30rpx;
+}
+
+.sub_title {
+    width: 180rpx;
+    padding: 10rpx;
+}
+
+.image_item_wrap {
+    display: -webkit-flex;
+}
+
+.image_uploaded {
+    width: 375rpx;
+    height: 180rpx;
+    margin: 10rpx;
+}
+
+.image_not_upload {
+    width: 180rpx;
+    height: 180rpx;
+    margin: 20rpx;
+
+}
+
+.apply_buyer_button_wrap {
+    margin-bottom: 100rpx;
+}
+
+.apply_buyer_button {
+    border-color: #f36062;
+    color: #f36062;
+    background-color: white;
+}
+
+.picker {
+    width: 600rpx;
+    border: 1rpx solid #f0f0f0;
+    padding: 10rpx;
+    border-radius: 5rpx;
+    margin:20rpx;
+}
+
+.textarea {
+    width: 600rpx;
+    height: 200rpx;
+    border: 1rpx solid #f0f0f0;
+    padding: 10rpx;
+    margin:20rpx;
+    border-radius: 5rpx;
+}
+
+
+.button {
+    background-color: #f36062;
+    color: white;
+    position: fixed;
+    bottom: 100rpx;
+    width: 630rpx;
+    margin: 40rpx;
+}

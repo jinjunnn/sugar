@@ -1,0 +1,92 @@
+/* pages/act/team/team.wxss */
+
+.title_wrap {
+    width: 670rpx;
+    padding:40rpx;
+    background-color: #f8e9d9;
+    color: #4d3a23;
+}
+
+.title{
+    border-bottom: 1rpx solid 4d3a23;
+}
+
+.title_title{
+    font-size: 40rpx;
+    margin-bottom: 10rpx;
+}
+
+.title_item{
+    font-size: 20rpx;
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+}
+
+.content{
+
+}
+
+.content_detail{
+    font-size:24rpx;
+    margin-top: 10rpx;
+}
+
+.content_wrap{
+    width: 670rpx;
+    padding:40rpx;
+}
+
+.content_wrap_wrap{
+    display: -webkit-flex;
+    justify-content: space-between;
+    color:#4d3a23;
+}
+
+.image_wraps{
+    display: -webkit-flex;
+    justify-content: space-around;
+    margin:50rpx 0rpx 50rpx 0rpx;
+}
+
+.image_item{
+    width: 105rpx;
+    height: 105rpx;
+}
+
+.image{
+       width: 105rpx;
+       height: 105rpx;
+       border-radius: 50%;
+}
+
+.image_item{
+       width: 105rpx;
+       height: 105rpx;
+       border-radius: 50%;
+}
+
+.image_else{
+       width: 104rpx;
+       height: 104rpx;
+       border-radius: 50%;
+       border: 1rpx dashed #4d3a23;
+}
+
+.tips{
+    text-align: center;
+    width:670rpx;
+    margin: 15rpx 0rpx 30rpx 0rpx;
+    color:#4d3a23;
+    font-size: 22rpx;
+}
+
+
+.gift{
+    width: 670rpx;
+}
+
+.button_item{
+    background-color: #f7d0a6;
+    color:#4d3a23;
+    border: #f7d0a6;
+}

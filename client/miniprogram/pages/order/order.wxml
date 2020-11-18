@@ -1,0 +1,136 @@
+<!--pages/order/order.wxml-->
+<view>
+    <!-- 地址 -->
+    <view>
+        <view class="gap"></view>
+        <view bindtap="bind_get_user_address" wx:if="{{address}}" class="address_wrap">
+            <view class="address_text_wrap">
+                <view class="address_title">收货人信息</view>
+                <view class="address_detail">{{address.userName}} {{address.telNumber}}</view>
+                <view class="address_detail">
+                    {{address.provinceName}}{{address.cityName}}{{address.countyName}}{{address.detailInfo}}
+                </view>
+            </view>
+            <image class="arror_icon" src="{{arror_icon}}"></image>
+        </view>
+        <view bindtap="bind_get_user_address" wx:else class="address_wrap">
+            <view class="address_text_wrap">
+                <view class="address_title">收货人信息</view>
+                <view class="address_detail">填写收货人信息</view>
+            </view>
+            <image class="arror_icon" src="{{arror_icon}}"></image>
+        </view>
+        <view class="gap"></view>
+    </view>
+    
+    <!-- 产品 -->
+    <view class="product_wrap">
+        <image class="product_image" src="{{good.images[0]}}"></image>
+        <view class="text_wrap">
+            <view class="text_title">{{good.name}}</view>
+            <view class="sku_wrap">
+                <view wx:for="{{good.sku}}" wx:key="item">
+                    <view class="sku_item_wrap">
+                        <view class="sku_item">{{item.label}}:{{item.desc}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="price_wrap">
+                <view class="product_price">￥{{good.price}}</view>
+                <view class="product_amount"> × {{amount}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="gap"></view>
+
+    <!-- 服务费，红包，优惠券 -->
+    <view class="fee_wrap">
+        <view class="item_wrap">
+            <view class="fee_text">运费</view>
+            <view class="fee_text">{{good.trans_fee}}元</view>
+        </view>
+        <view class="item_wrap">
+            <view class="fee_text">代买服务费</view>
+            <view class="fee_text">{{good.fee}}元</view>
+        </view>
+        <view class="item_wrap">
+            <view class="fee_text">税费</view>
+            <view class="fee_text">{{good.tax}}元</view>
+        </view>
+        <view class="item_wrap">
+            <view class="fee_text">优惠券</view>
+            <view class="detail_wrap">
+                <view class="detail_text">暂无可用</view>
+                <image class="detail_icon" src='{{arror_icon}}'></image>
+            </view>
+        </view>
+        <!-- <view class="item_wrap">
+            <view class="fee_text">
+                <switch class="fee_text_dis_other" bindchange="bind_change" type="checkbox" checked="{{checked}}">开通会员
+                </switch>
+            </view>
+            <view class="detail_wrap">
+                <view class="other_remark_dis">9.9元会员减免运费物流费</view>
+            </view>
+        </view> -->
+        <!-- <view class="item_wrap_bottom">
+            <view class="fee_text">您当前拥有0金币，本单抵扣0金币</view>
+        </view> -->
+    </view>
+    <view class="gap"></view>
+
+    <!-- 配送方式 -->
+    <view class="fee_wrap">
+        <view class="item_wrap"> 
+            <view class="fee_text">配送方式</view>
+            <view class="fee_text">国际转运</view>
+        </view>
+        <view class="item_wrap">
+            <view class="other_title">会员</view>
+            <view class="other_remark_dis" wx:if="{{user.vip==1}}">
+                <view class="other_remark_dis">会员减免手续费运费合计{{good.trans_fee+good.fee}}元</view>
+            </view>
+            <view class="other_remark_dis" wx:else>
+                <view class="other_remark_dis">9.9元会员减免运费物流费</view>
+                <switch class="fee_text_dis" bindchange="bind_change" type="checkbox" checked="{{checked}}">开通会员
+                </switch>
+            </view>
+        </view>
+        <view class="item_wrap">
+            <view class="other_title">备注</view>
+            <input class="other_remark" placeholder="选填，如产品型号、自选中转仓地址" bindblur="bind_get_remark"
+                bindconfirm="bind_get_remark"></input>
+        </view>
+
+        <view class="item_wrap">
+            <view class="other_title">下单须知</view>
+            <view class="other_remark">该订单正在参加折扣活动，若美国专柜无货或网站砍单导致的代下单失败会全额退款，还请谅解。</view>
+        </view>
+    </view>
+    <view class="bottom"></view>
+    <view class="bottom_fix"></view>
+</view>
+
+<view class="button_wrap">
+    <view class="button_price">
+        <view class="button_price_text" wx:if="{{user.vip==1}}">合计金额：<text
+                class="order_price">{{good.price * amount}}</text></view>
+        <view class="button_price_text" wx:elif="{{checked==false}}">合计金额：<text
+                class="order_price">{{good.price * amount+good.fee+good.trans_fee+good.tax}}</text></view>
+        <!-- <view class="button_price_text" wx:elif="{{good.price* amount > 200}}">合计金额：<text
+                class="order_price">{{good.price* amount+good.fee-12}}</text></view> -->
+
+        <view class="button_price_text" wx:else>合计金额：<text class="order_price">{{good.price * amount +9.9}}</text></view>
+    </view>
+    <form bindsubmit="formSubmit" report-submit="true" report-submit-timeout="300">
+        <button formType="submit" class="btn_submit_right" bindgetuserinfo="bindgetuserinfo" bindtap="bind_submit"
+            wx:if="{{user.vip==1}}" data-price="{{good.price * amount}}">提交订单</button>
+         <button formType="submit"
+            class="btn_submit_right" bindgetuserinfo="bindgetuserinfo"
+            bindtap="bind_submit" wx:elif="{{checked==false}}"
+            data-price="{{good.price * amount+good.fee+good.trans_fee+good.tax}}">提交订单</button>
+
+        <button formType="submit" class="btn_submit_right" bindgetuserinfo="bindgetuserinfo"
+            bindtap="bind_submit" wx:else data-price="{{good.price * amount +9.9}}">提交订单</button>
+    </form>
+</view>

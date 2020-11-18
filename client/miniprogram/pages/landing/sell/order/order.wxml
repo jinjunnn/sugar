@@ -1,0 +1,83 @@
+<!--pages/order/order.wxml-->
+<view>
+    <!-- 地址 -->
+    <view>
+        <view class="gap"></view>
+        <view bindtap="bind_get_user_address" wx:if="{{address}}" class="address_wrap">
+            <view class="address_text_wrap">
+                <view class="address_title">收货人信息</view>
+                <view class="address_detail">{{address.userName}} {{address.telNumber}}</view>
+                <view class="address_detail">
+                    {{address.provinceName}}{{address.cityName}}{{address.countyName}}{{address.detailInfo}}
+                </view>
+            </view>
+            <image class="arror_icon" src="{{arror_icon}}"></image>
+        </view>
+        <view bindtap="bind_get_user_address" wx:else class="address_wrap">
+            <view class="address_text_wrap">
+                <view class="address_title">收货人信息</view>
+                <view class="address_detail">填写收货人信息</view>
+            </view>
+            <image class="arror_icon" src="{{arror_icon}}"></image>
+        </view>
+        <view class="gap"></view>
+    </view>
+
+    <!-- 产品 -->
+    <view class="product_wrap">
+        <image class="product_image" src="{{good.image}}"></image>
+        <view class="text_wrap">
+            <view class="text_title">{{good.name}}</view>
+            <view class="sku_wrap">
+                <view wx:key="item">
+                    <view class="sku_item_wrap" wx:if="{{good.sku[choosed].name}}">
+                        <view class="sku_item">{{good.sku[choosed].name}}</view>
+                    </view>
+                    <view class="sku_item_wrap" wx:elif="{{good.size}}">
+                        <view class="sku_item">{{good.size}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="price_wrap">
+                <view class="product_price">￥{{good.price}}</view>
+                <view class="product_amount"> × {{amount}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="gap"></view>
+
+
+    <!-- 配送方式 -->
+    <view class="fee_wrap">
+        <view class="item_wrap">
+            <view class="fee_text">配送方式</view>
+            <view class="fee_text">国际转运</view>
+        </view>
+        <view class="item_wrap">
+            <view class="other_title">物流费</view>
+            <view class="fee_text">{{good.fee}}</view>
+  
+        </view>
+        <view class="item_wrap">
+            <view class="other_title">备注</view>
+            <input class="other_remark" placeholder="选填备注信息" bindblur="bind_get_remark"
+                bindconfirm="bind_get_remark"></input>
+        </view>
+
+        <view class="item_wrap">
+            <view class="other_title">下单须知</view>
+            <view class="other_remark">部分热门商品容易引发抢购，未预定商品未能海淘成功，会第一时间全额退款，不承担违约责任。</view>
+        </view>
+    </view>
+    <view class="bottom"></view>
+    <view class="bottom_fix"></view>
+</view>
+
+<view class="button_wrap">
+    <view class="button_price">
+        <view class="button_price_text" wx:if="{{checked==false}}">合计金额：<text
+                class="order_price">{{good.price* amount+ good.fee}}</text></view>
+    </view>
+    <button formType="submit" class="btn_submit_right" bindgetuserinfo="bindgetuserinfo" bindtap="bind_submit" data-price="{{good.price* amount+good.fee}}">提交订单</button>
+
+</view>

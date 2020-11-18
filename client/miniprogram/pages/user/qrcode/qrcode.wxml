@@ -1,0 +1,10 @@
+<!--pages/user/qrcode/qrcode.wxml-->
+<view class="content">
+    <!-- <view class="user_wrap">
+        <view>
+            <image src="{{user}}"></image>
+        </view>
+    </view> -->
+    <image src='data:image/png;base64,{{qr_code}}' style="height:550rpx; width:550rpx"></image>
+    <view style="font-size:24rpx;text-align: center;padding:20rpx">扫码代购您想要的商品，自营社交电商，100%商品专柜官网。</view>
+</view>

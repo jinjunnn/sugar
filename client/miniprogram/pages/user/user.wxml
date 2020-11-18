@@ -1,0 +1,279 @@
+
+<view class="{{backgroundColor}}" catchtouchmove="true">
+	<view class="commodity_screen" wx:if="{{showModalStatus==6}}" touchmove="bind_close">
+		<view class="modal_wrap" hover-class="none" hover-stop-propagation="false">
+			<view class="title" hover-class="none" hover-stop-propagation="false">
+				{{settings.customer_service_name}}
+			</view>
+			<view class="sub_title" hover-class="none" hover-stop-propagation="false">
+				<!-- {{result.title}} -->
+			</view>
+			<view class="" hover-class="none" hover-stop-propagation="false">
+				<image class="model_image" src="{{settings.customer_service_qrcode}}" mode="aspectFill" lazy-load="true"
+					binderror="" bindload="">
+
+				</image>
+				<view class="model_content" hover-class="none" hover-stop-propagation="false">
+					<!-- {{result.content}} -->
+				</view>
+
+			</view>
+		</view>
+		<view class="modal_btn_wrap">
+			<view class="button_wrap">
+				<button class="left_button" bindtap="bind_close" data-message="{{settings.customer_service_wechatid}}">
+					暂不需要
+				</button>
+				<button class="right_button" bindtap="bind_close">
+					关闭
+				</button>
+			</view>
+			<view class="heihei" hover-class="none" hover-stop-propagation="false">
+				{{settings.customer_service_content}}
+			</view>
+		</view>
+	</view>
+</view>
+<!-- 未获取到数据显示空白 -->
+<view wx:if="{{display==false}}">
+
+</view>
+<!-- 加载到数据后显示加载数据的内容 -->
+<view wx:elif="{{display==true}}">
+	<view style="background-color:#ffffff;  border-radius: 10rpx;margin:20rpx">
+		<view style="margin: 0rpx 50rpx 100rpx 50rpx;padding-top: 30rpx;">
+			<navigator url="./setting/setting">
+				<view style="display: -webkit-flex;justify-content: space-between;">
+					<view style="margin-top: 5rpx;flex: 5;">
+						<view style="font-size:20pt;" class="title_item" wx:if="{{user.nickName}}">{{user.nickName}}</view>
+						<view style="font-size:13pt; margin-top:5rpx;margin-bottom: 20rpx;">
+							<span id="changestyle">ID:{{user.uid}}</span>
+						</view>
+					</view>
+					<view class="item_author_icon">
+						<image wx:if="{{user.image}}" src="{{user.image}}" class="author_icon_item"
+							style=" width:120rpx; height:120rpx;border-radius: 50%" mode="scaleToFill"></image>
+						<image wx:else src="{{icon_user}}" class="author_icon_item"
+							style=" width:120rpx; height:120rpx;border-radius: 50%" mode="scaleToFill"></image>
+					</view>
+				</view>
+			</navigator>
+		</view>
+
+			<view class="author">
+				<view class="author_title" bindtap="bind_balance">
+						<view style="font-size:10pt;" 
+							class="title_item">{{user.balance}}</view>
+						<view style="font-size:10pt;" 
+							class="title_item">金币</view>
+				</view>
+				<view class="author_title" bindtap="bind_intergal">
+						<view style="font-size:10pt;" 
+							class="title_item">{{user.i_balance}}</view>
+						<view style="font-size:10pt;" 
+							class="title_item">积分</view>
+				</view>
+				<view class="author_title" bindtap="bind_wish">
+						<view style="font-size:10pt;" 
+							class="title_item">{{user.f_balance}}</view>
+						<view style="font-size:10pt;" 
+							class="title_item">心愿</view>
+				</view>
+			</view>
+	</view>
+	<view style="background-color: #ffffff; border-radius: 10rpx; margin:20rpx;" hover-class=" none"
+		hover-stop-propagation="false">
+		<!-- <view class="form-wrap" style="font-size:28rpx;">
+			<button open-type="contact" bindcontact="handleContact" class="navigator">
+				<view class="userImage2">
+					<image src="{{icon_service}}" style="margin-top: 10rpx; width:50rpx; height:50rpx;" mode="scaleToFill">
+					</image>
+				</view>
+				<view class="userName">联系客服</view>
+				<view class="icon">
+					<image src="{{icon_arrow}}" style=" width:60rpx; height:60rpx" mode="scaleToFill"></image>
+				</view>
+			</button>
+		</view> -->
+		<view style="padding:20rpx">
+			<view style="display: -webkit-flex;justify-content: space-between;" >
+				<view style="display: -webkit-flex;" hover-class="none" hover-stop-propagation="false">
+					<view class="" hover-class="" hover-stop-propagation="false">
+						<image style="height:90rpx; width:90rpx;margin-top:8rpx; border-radius: 20rpx;"
+							src="http://lc-XBtceMXX.cn-n1.lcfile.com/7eeab161b6572679e50f.jpeg/WechatIMG2890.jpeg"
+							mode="widthFix" lazy-load="false" binderror="" bindload="">
+
+						</image>
+					</view>
+					<view style="font-size:28rpx;padding-top:30rpx;padding-left:20rpx" hover-class="none" hover-stop-propagation="false">
+						客服
+					</view>
+				</view>
+				<view style="width:180rpx" hover-class="none" hover-stop-propagation="false">
+					<button class="button" size="mini" open-type='contact'>
+						联系我
+					</button>
+				</view>
+
+			</view>
+		</view>
+	</view>
+	<view class="first" hover-class="none" hover-stop-propagation="false">
+		<view style="margin:20rpx 0 0 40rpx;font-size: 24rpx;padding:20rpx 0 20rpx 0" hover-class="none"
+			hover-stop-propagation="false">
+			订单管理
+		</view>
+		<view class="second_b" hover-class="none" hover-stop-propagation="false">
+			<view bindtap="bind_order" class="items_wrap" data-type="1">
+				<image class="second_image"
+					src="http://lc-XBtceMXX.cn-n1.lcfile.com/b5d410aa19568d132e59/%E8%AE%A2%E5%8D%95%20%285%29.png" lazy-load="false"
+					binderror="" bindload=""></image>
+				<view class="first_text" hover-class="none" hover-stop-propagation="false">
+					快闪店订单
+				</view>
+			</view>
+			<view bindtap="bind_order" class="items_wrap" data-type="2">
+				<image class="second_image"
+					src="http://lc-XBtceMXX.cn-n1.lcfile.com/f6ecf4c38961c8046e6c/%E8%AE%A2%E5%8D%95%20%283%29.png" lazy-load="false"
+					binderror="" bindload=""></image>
+				<view class="first_text" hover-class="none" hover-stop-propagation="false">
+					商城订单
+				</view>
+			</view>
+			<!-- <view bindtap="bind_enquiry_order" class="items_wrap">
+				<image class="second_image"
+					src="http://lc-XBtceMXX.cn-n1.lcfile.com/f6ecf4c38961c8046e6c/%E8%AE%A2%E5%8D%95%20%283%29.png" lazy-load="false"
+					binderror="" bindload=""></image>
+				<view class="first_text" hover-class="none" hover-stop-propagation="false">
+					询价订单
+				</view>
+			</view>
+			<view bindtap="bind_sell_order" class="items_wrap">
+				<image class="second_image"
+					src="http://lc-XBtceMXX.cn-n1.lcfile.com/c8a0caa5559377c0d829/%E8%AE%A2%E5%8D%95%20%284%29.png"
+					lazy-load="false" binderror="" bindload=""></image>
+				<view class="first_text" hover-class="none" hover-stop-propagation="false">
+					海淘订单
+				</view>
+			</view> -->
+			<view bindtap="bind_sell_order" class="items_wrap">
+				<image class="second_image"
+					src="http://lc-XBtceMXX.cn-n1.lcfile.com/c8a0caa5559377c0d829/%E8%AE%A2%E5%8D%95%20%284%29.png"
+					lazy-load="false" binderror="" bindload=""></image>
+				<view class="first_text" hover-class="none" hover-stop-propagation="false">
+					抽奖订单
+				</view>
+			</view>
+			<view bindtap="bind_box" class="items_wrap">
+				<image class="second_image"
+					src="http://lc-XBtceMXX.cn-n1.lcfile.com/f65fd940b4810dbf6077/%E8%AE%A2%E5%8D%95%20%282%29.png"
+					lazy-load="false" binderror="" bindload=""></image>
+				<view class="first_text" hover-class="none" hover-stop-propagation="false">
+					盲盒订单
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="first" hover-class="none" hover-stop-propagation="false">
+		<view style="margin:20rpx 0 0 40rpx;font-size: 24rpx;padding:20rpx 0 20rpx 0" hover-class="none"
+			hover-stop-propagation="false">
+			我的活动
+		</view>
+		<view class="second_b" hover-class="none" hover-stop-propagation="false">
+			<view bindtap="bind_invite" class="items_wrap">
+				<image class="second_image" src="http://lc-XBtceMXX.cn-n1.lcfile.com/aacde404718d5a8dbe51/%E9%82%80%E8%AF%B7.png"
+					lazy-load="false" binderror="" bindload=""></image>
+				<view class="first_text" hover-class="none" hover-stop-propagation="false">
+					我的邀请
+				</view>
+			</view>
+			<view bindtap="bind_invite_other" class="items_wrap">
+				<image class="second_image" src="http://lc-XBtceMXX.cn-n1.lcfile.com/acd6476908fb8451c219/%E8%B5%9E.png"
+					lazy-load="false" binderror="" bindload=""></image>
+				<view class="first_text" hover-class="none" hover-stop-propagation="false">
+					我的积攒
+				</view>
+			</view>
+			<view bindtap="bind_team" class="items_wrap">
+				<image class="second_image" src="http://lc-XBtceMXX.cn-n1.lcfile.com/ab022d48a970aa474024/%E7%BB%84%E9%98%9F.png"
+					lazy-load="false" binderror="" bindload=""></image>
+				<view class="first_text" hover-class="none" hover-stop-propagation="false">
+					我的组队
+				</view>
+			</view>
+			<view bindtap="bind_lock_record" class="items_wrap">
+				<image class="second_image"
+					src="http://lc-XBtceMXX.cn-n1.lcfile.com/00918ca61dc0a98fdefc/%E6%8A%BD%E5%A5%96%20%283%29.png"
+					lazy-load="false" binderror="" bindload=""></image>
+				<view class="first_text" hover-class="none" hover-stop-propagation="false">
+					我的抽奖
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="first" hover-class="none" hover-stop-propagation="false">
+		<view style="margin:20rpx 0 0 40rpx;font-size: 24rpx;padding:20rpx 0 20rpx 0" hover-class="none"
+			hover-stop-propagation="false">
+			个人资料
+		</view>
+		<view class="second_b" hover-class="none" hover-stop-propagation="false">
+			<view bindtap="bind_qrcode" class="items_wrap">
+				<image class="second_image"
+					src="http://lc-XBtceMXX.cn-n1.lcfile.com/b38fd81ce1df8ea2bbfd/%E4%BA%8C%E7%BB%B4%E7%A0%81.png" lazy-load="false"
+					binderror="" bindload=""></image>
+				<view class="first_text" hover-class="none" hover-stop-propagation="false">
+					专属小程序码
+				</view>
+			</view>
+			<view bindtap="bind_invite" class="items_wrap">
+				<image class="second_image"
+					src="http://lc-XBtceMXX.cn-n1.lcfile.com/8461ffa9fce6e608ca30/%E5%A5%96%E5%8A%B1%E9%87%91%E6%98%8E%E7%BB%86.png"
+					lazy-load="false" binderror="" bindload=""></image>
+				<view class="first_text" hover-class="none" hover-stop-propagation="false">
+					邀请奖励金
+				</view>
+			</view>
+
+		</view>
+	</view>
+	<view class="first" hover-class="none" hover-stop-propagation="false">
+		<view style="margin:20rpx 0 0 40rpx;font-size: 24rpx;padding:20rpx 0 20rpx 0" hover-class="none"
+			hover-stop-propagation="false">
+			商业合作
+		</view>
+		<view class="second_b" hover-class="none" hover-stop-propagation="false">
+
+			<view bindtap="bind_marketting" class="items_wrap">
+				<image class="second_image"
+					src="http://lc-XBtceMXX.cn-n1.lcfile.com/89e969b9dbe8306575aa/%E5%90%88%E4%BD%9C%E4%BC%99%E4%BC%B4.png"
+					lazy-load="false" binderror="" bindload=""></image>
+				<view class="first_text" hover-class="none" hover-stop-propagation="false">
+					合作咨询
+				</view>
+			</view>
+			<view bindtap="bind_agency_service" class="items_wrap">
+				<image class="second_image" src="http://lc-XBtceMXX.cn-n1.lcfile.com/cf4166aaed890785962f/%E4%BB%A3%E7%90%86.png"
+					lazy-load="false" binderror="" bindload=""></image>
+				<view class="first_text" hover-class="none" hover-stop-propagation="false">
+					成为代理
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="end" hover-class="none" hover-stop-propagation="false">
+		<view class="" hover-class="none" hover-stop-propagation="false">
+
+		</view>
+		<text class="" selectable="false" space="false" decode="false">
+			-----END-----
+			小程序由微时代文化开发
+			SUGAR全球快闪店负责运营
+
+
+		</text>
+	</view>
+
+	<view style="height:30rpx"></view>
+</view>

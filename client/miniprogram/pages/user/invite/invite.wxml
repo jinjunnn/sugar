@@ -1,0 +1,37 @@
+ <!--pages/user/help/help.wxml-->
+ <view class="contain">
+     <view class="signin_wrap">
+         <view class="signin_title">您已经邀请了{{amounts}}好友</view>
+         <view wx:for="{{usrs}}" wx:key="wishkey">
+             <view class="task_subwrap" bindtap="bind_item" data-objectid="{{item[5]}}">
+                 <view>
+                    <image src="{{item[3]}}" mode="aspectFill" class="image_goods" wx:if="{{item[3]}}"></image>
+                    <image src="{{icon_user}}" mode="aspectFill" class="image_goods" wx:else></image>
+                    
+                 </view>
+                 <view class="task_subwrap_wrap">
+                     <view class="task_subwrap_title" wx:if="{{item[2]}}">{{item[2]}}</view>
+                     <view class="task_subwrap_title" wx:else>未授权微信名/头像</view>
+                     <view class="task_subwrap_title">ID:{{item[1]}}</view>
+                     <view class="task_subwrap_content">累计消费￥<text class="task_subwrap_content_detail">{{item[0]}}</text>元 奖励金￥<text class="task_subwrap_content_detail">{{item[0]*0.05}}</text>元</view>
+                 </view>
+                 <view>
+                     <image src="/image/前进.png" class="image_arrow"></image>
+                 </view>
+             </view>
+         </view>
+         <view style="font-size:20rpx;padding:20rpx">
+             <text>
+                 邀请好友补贴规则：
+                 1.邀请好友注册：每一名用户可以邀请50名用户，被邀请的用户注册平台后购买任何平台自营的商品(目前平台产品均为自营)可以获得5%的平台补贴；
+                 2.被邀请人邀请好友注册：被邀请人邀请的好友购买平台自营商品，被邀请人可以获得5%的平台补贴，您可以获得1%的平台补贴；
+                 3.举例：您邀请了50人注册，每名用户消费了1000元，共计消费（1000元*50人=）50000元，您可以获得50000*5%=2500元；每一名被邀请人又邀请了50人，每人消费1000元，共计消费（1000元*50人*50人=）250万元，您可以获得1%，25000元平台补贴，合计27500元。
+                 4.邀请建议：由于每人限制邀请50人，请尽量邀请有购买需求的人，这样您可以获得更多的平台补贴。
+                 5.好友邀请与分享产品获得的平台补贴不可同时获得，用户通过分享产品链接或产品二维码购买商品，用户获得5%的平台补贴，不受50人的名单限制。(您通过分享链接邀请任何人购买产品，均可以获得平台的分享补贴。)
+                 6.本规则有效期至2020年12月31日。
+                 7.本规则的最终解释权归SUGAR全球买手店所有。
+             </text>
+         </view>
+     </view>
+     <view style="height:30rpx"></view>
+ </view>

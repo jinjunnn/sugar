@@ -1,0 +1,23 @@
+
+<textarea placeholder="请您填写您要购买的商品" model:value="{{title}}" auto-height confirm-type="next"
+    bindinput="input_title" bindfocus="" bindconfirm="" bindblur="" class="textarea"></textarea>
+
+<input placeholder="请输入您的微信号码" confirm-type="next"  model:value="{{wechatid}}" bindinput="input_wechatid"
+    bindblur="" bindfocus="" bindconfirm="" class="picker"></input>
+
+<input placeholder="请填写您的手机号码" confirm-type="next" type='number' model:value="{{phone}}" bindinput="input_phone"
+    bindblur="" bindfocus="" bindconfirm="" class="picker"></input>
+<view style='margin:20rpx;color:gray'>上传图片(选填)</view>
+<view wx:if="{{!image}}" bindtap="bind_images">
+    <image class="image_not_upload" src="{{add_icon}}"/>
+</view>
+<view wx:else class="image_item_wrap" bindtap="bind_images">
+    <view class="image_item_wrap">
+        <image class="image_not_upload" src="{{image}}"/>
+    </view>
+</view>
+<button class="button" bindtap="bind_submit">
+    发布收货
+</button>
+<view style="height:100rpx">
+</view>

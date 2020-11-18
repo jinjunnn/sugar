@@ -1,0 +1,78 @@
+<view class="title_wrap">
+    <view class="title">
+        <view  class="title_title">
+            SUGAR全球快闪店
+        </view >
+        <view class="title_title">
+            {{teams_title}}
+        </view>
+        <view class="title_item">
+            {{today}}期
+        </view>
+    </view>
+    <view class="content">
+        <text class="content_detail">{{teams_content}}
+        </text>
+    </view>
+</view>
+
+<view class="content_wrap">
+    <view class="content_wrap_wrap">
+        <view wx:if="{{user_images.length < 5}}">
+            本期组队还差{{5-user_images.length}}人
+        </view>
+        <view wx:else>
+            组队成功已派发奖励
+        </view>
+        <view bindtap="bind_nav_record">
+            抽奖记录>
+        </view>
+    </view>
+    <view class="image_wraps">
+        <view wx:if="{{user_images[0].image}}" class="image_item">
+            <image src="{{user_images[0].image}}" class="image"></image>
+        </view>
+        <view wx:else class="image_item">
+            <view class="image_else"></view>
+        </view>
+        <view wx:if="{{user_images[1].image}}" class="image_item">
+            <image src="{{user_images[1].image}}" class="image"></image>
+        </view>
+        <view wx:else class="image_item">
+            <view class="image_else"></view>
+        </view>
+        <view wx:if="{{user_images[2].image}}" class="image_item">
+            <image src="{{user_images[2].image}}" class="image"></image>
+        </view>
+        <view wx:else class="image_item">
+            <view class="image_else"></view>
+        </view>
+        <view wx:if="{{user_images[3].image}}" class="image_item">
+            <image src="{{user_images[3].image}}" class="image"></image>
+        </view>
+        <view wx:else class="image_item">
+            <view class="image_else"></view>
+        </view>
+        <view wx:if="{{user_images[4].image}}" class="image_item">
+            <image src="{{user_images[4].image}}" class="image"></image>
+        </view>
+        <view wx:else class="image_item">
+            <view class="image_else"></view>
+        </view>
+    </view>
+    <button wx:if="{{user_images.length >= 5 }}" class="button_item" bindtap="bind_new_team">人数已满 新开队伍</button>
+    <button wx:elif="{{button_value=='share'}}" class="button_item" bindtap="share" open-type="share">邀请好友加入队伍</button>
+    <button wx:elif="{{button_value=='attend'}}" class="button_item" bindtap="tap_button">参加组队</button>
+    <view class="tips">
+        组队成功立即派发奖励
+    </view>
+</view>
+
+<view class="content_wrap">
+    <view>
+        奖品一览
+    </view>
+    <view>
+        <image src="{{gifts}}" class="gift" mode="widthFix"></image>
+    </view>
+</view>

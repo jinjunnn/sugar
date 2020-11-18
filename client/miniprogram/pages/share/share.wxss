@@ -1,0 +1,94 @@
+/* pages/likes/other.wxss */
+
+page {
+    background-color: #f2f2f2;
+}
+
+.wraps {
+    margin: 40rpx;
+    background-color: #ed4141;
+    border-radius: 30rpx;
+    color: white;
+    font-size: 28rpx;
+    opacity: 0.85;
+}
+
+.wrapss {
+    margin: 40rpx;
+    background-color: #ed4141;
+    border-radius: 30rpx;
+    color: white;
+    font-size: 28rpx;
+    opacity: 0.85;
+}
+
+.text {
+    padding: 40rpx;
+}
+
+.images {
+    padding: 20rpx 40rpx 20rpx 40rpx;
+    width: 590rpx;
+    border-radius: 20rpx;
+}
+
+.buttons {
+    background-color: #fa9a27;
+    margin: 40rpx;
+    border-radius: 20rpx;
+    color: white;
+    border: 0rpx;
+}
+
+.wrap2 {
+    margin: 0rpx 40rpx 0rpx 40rpx;
+    background-color: white;
+    border-radius: 20rpx;
+}
+
+.image2 {
+    width: 670rpx;
+    height: 335rpx;
+    border-radius: 20rpx 20rpx 0rpx 0rpx;
+}
+
+.content_wrap2 {
+    width: 670rpx;
+    height: 220rpx;
+    display: -webkit-flex;
+
+}
+
+.left_content {
+    width: 540rpx;
+    font-size: 24rpx;
+}
+
+.title2 {
+    font-size: 40rpx;
+    margin: 20rpx 2rpx 20rpx 20rpx;
+}
+
+.content {
+    color: #b0b0b0;
+    margin: 20rpx 2rpx 20rpx 20rpx;
+}
+
+.right_content {
+    width: 130rpx;
+    margin: 60rpx 40rpx 40rpx 40rpx;
+}
+
+.right_item {
+    width: 100rpx;
+    padding: 10rpx 20rpx 10rpx 20rpx;
+    text-align: center;
+    background-color: tomato;
+    border-radius: 30rpx;
+    color: white;
+    font-size: 24rpx;
+}
+
+.hhh {
+    background-color: #f2f2f2;
+}

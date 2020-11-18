@@ -1,0 +1,50 @@
+<view class="wrap">
+    <view wx:for="{{record}}" wx:for-item="item" wx:for-index="label_index" class="item_wrap">
+        <view class="item_title" hover-class="none" hover-stop-propagation="false">
+            
+            <view class="item_title_item" hover-class="none" hover-stop-propagation="false">
+                第{{item[0].time}}期
+            </view>
+            <view class="item_title_item" hover-class="none" hover-stop-propagation="false" wx:if="{{item.length < 5}}">
+                未完成
+            </view>
+            <view class="item_title_item" hover-class="none" hover-stop-propagation="false" wx:else>
+                已获赠48心愿
+            </view>
+        </view>
+        <view class="item_image">
+            <view wx:if="{{item[0].image}}" class="image_item">
+                <image src="{{item[0].image}}" class="image"></image>
+            </view>
+            <view wx:else class="image_item">
+                <view class="image_else"></view>
+            </view>
+            <view wx:if="{{item[1].image}}" class="image_item">
+                <image src="{{item[1].image}}" class="image"></image>
+            </view>
+            <view wx:else class="image_item">
+                <view class="image_else"></view>
+            </view>
+            <view wx:if="{{item[2].image}}" class="image_item">
+                <image src="{{item[2].image}}" class="image"></image>
+            </view>
+            <view wx:else class="image_item">
+                <view class="image_else"></view>
+            </view>
+            <view wx:if="{{item[3].image}}" class="image_item">
+                <image src="{{item[3].image}}" class="image"></image>
+            </view>
+            <view wx:else class="image_item">
+                <view class="image_else"></view>
+            </view>
+            <view wx:if="{{item[4].image}}" class="image_item">
+                <image src="{{item[4].image}}" class="image"></image>
+            </view>
+            <view wx:else class="image_item">
+                <view class="image_else"></view>
+            </view>
+        </view>
+
+    </view>
+</view>
+<view style="height:60rpx"></view>

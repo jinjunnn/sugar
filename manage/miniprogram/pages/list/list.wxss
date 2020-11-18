@@ -1,0 +1,56 @@
+page {
+    background-color: #D6DBE5;
+}
+
+.box {
+    background-color: white;
+    margin-left: 40rpx;
+    border-radius: 10rpx;
+    margin-bottom: 30rpx;
+    max-width:500rpx;
+}
+
+.image_wrap {
+    max-height: 500rpx;
+    overflow:hidden;
+}
+
+.image {
+    width: 500rpx;
+    border-radius: 10rpx;
+}
+
+.title {
+    padding: 3rpx 10rpx 3rpx 10rpx;
+    font-size: 24rpx;
+}
+
+.tag {
+    background-color: #D6DBE5;
+    padding:0 4rpx 0 4rpx;
+    border-radius: 10rpx;
+    margin-right:20rpx;
+    margin-top: 8rpx;
+    font-size: 24rpx;
+}
+
+.content {
+    padding: 3rpx 10rpx 3rpx 10rpx;
+    font-size: 24rpx;
+}
+
+.btn {
+    position: fixed;
+    top: 40rpx;
+    text-align: center;
+    background-color: #f36062;
+    font-size: 32rpx;
+    font-weight: bolder;
+    color: #ffffff;
+    width: 180rpx;
+    height: 80rpx;
+    padding: 5rpx;
+    border-radius: 40rpx 0 0 40rpx;
+    margin-left: 570rpx;
+    border: 0rpx;
+}

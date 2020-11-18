@@ -1,0 +1,20 @@
+
+
+<view class="container">
+
+  <view class="page-body">
+    <view class="page-section">
+      <block>
+        <text class="page-body-text">请填写您的微信已方便联系您</text>
+        <view class="sub_wrap">
+          <input placeholder="请填写您的微信" confirm-type="next" value="{{value}}"
+            bindinput="input_value"  class="picker"></input>
+        </view>
+        <view style="height:100rpx"></view>
+        <view class="button-sp-area">
+          <button type="primary" plain="true" open-type="getUserInfo" bindgetuserinfo = "login">微信登录</button>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

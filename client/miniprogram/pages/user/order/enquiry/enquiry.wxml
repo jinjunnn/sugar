@@ -1,0 +1,29 @@
+<view class="wrap" hover-class="none" hover-stop-propagation="false" wx:for="{{cards}}" wx:key="item">
+    <view class="item" hover-class="none" hover-stop-propagation="false" bindtap="bind_detail" data-key="{{item.key}}">
+        <view class="sub_item" hover-class="none" hover-stop-propagation="false">
+            <view class="name" hover-class="none" hover-stop-propagation="false">
+                订单编号:{{item.time}}
+            </view>
+            <view class="name" hover-class="none" hover-stop-propagation="false">
+                {{item.list_name}}
+            </view>
+        </view>
+        <view class="content" hover-class="none" hover-stop-propagation="false">
+            {{item.content}}
+        </view>
+        <view class="sub_item2" hover-class="none" hover-stop-propagation="false">
+            <view class="sub_left" hover-class="none" hover-stop-propagation="false">
+                <view class="card" hover-class="none" hover-stop-propagation="false">
+                    {{item.title}}
+                </view>
+            </view>
+            <view class="sub_right" hover-class="none" hover-stop-propagation="false">
+                <button class="button" bindtap='bind_detail' data-key="{{item.key}}">
+                    详情
+                </button>
+            </view>
+
+        </view>
+
+    </view>
+</view>

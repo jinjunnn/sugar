@@ -1,0 +1,89 @@
+{
+  "pages": [
+
+    "pages/flash/flash",
+    "pages/flash/item/item",
+    
+    "pages/post/post",
+
+    "pages/landing/landing",
+    "pages/landing/enquiry/enquiry",
+    "pages/landing/sell/sell",
+    "pages/landing/sell/item/item",
+    "pages/landing/sell/qrcode/qrcode",
+    "pages/landing/sell/order/order",
+
+    "pages/fans/fans",
+
+    "pages/agency/agency",
+    "pages/agency/list/list",
+    "pages/agency/list/detail/detail",
+    "pages/agency/list/qrcode/qrcode",
+
+    "pages/act/act",
+    "pages/act/team/team",
+    "pages/act/box/box",
+    "pages/act/box/item/item",
+
+    "pages/likes/likes",
+    "pages/likes/other",
+
+    "pages/order/order",
+    "pages/share/share",
+
+    "pages/user/user",
+    "pages/user/invite/invite",
+    "pages/user/invite/other",
+    "pages/user/record/box/box",
+    "pages/user/record/box/item/item",
+    "pages/user/record/team/team",
+    "pages/user/record/team/item/item",
+    "pages/user/qrcode/qrcode",
+    "pages/user/order/order",
+    "pages/user/order/enquiry/enquiry",
+    "pages/user/order/enquiry/item/item",
+    "pages/user/order/sell/sell",
+    "pages/user/order/sell/item/item",
+    "pages/user/order/item/item",
+    "pages/user/intergal/record",
+    "pages/user/wish/record",
+    "pages/user/coin/record",
+    "pages/user/marketing/marketing",
+    "pages/user/agency/agency",
+    "pages/user/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#D54547",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/flash/flash",
+        "iconPath": "image/news.png",
+        "selectedIconPath": "image/news1.png",
+        "text": "快闪店"
+      },
+      {
+        "pagePath": "pages/landing/landing",
+        "iconPath": "image/buy.png",
+        "selectedIconPath": "image/buy2.png",
+        "text": "商城"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "image/me.png",
+        "selectedIconPath": "image/me2.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
+

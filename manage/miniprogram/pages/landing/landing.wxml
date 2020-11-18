@@ -1,0 +1,59 @@
+<view class="first" hover-class="none" hover-stop-propagation="false">
+    <!-- <view class="news" hover-class="none" hover-stop-propagation="false">
+        <text style="color:#D54547">NEWS</text>\t我是一个新闻
+    </view> -->
+    <view class="first_a" hover-class="none" hover-stop-propagation="false" wx:if="{{page_settings.landing_page_bannder_1}}">
+        <image class="first_banner" src="{{page_settings.landing_page_bannder_1}}" lazy-load="false" binderror="" bindload=""  mode="widthFix"></image>
+    </view>
+    <view class="the_title" hover-class="none" hover-stop-propagation="false">
+        {{page_settings.enquiry_title}}
+    </view>
+
+    <view class="first_b" hover-class="none" hover-stop-propagation="false" >
+        <block wx:for="{{page_settings.enquiry_wraps}}">
+            <view bindtap="bind_enquiry_wraps" data-key="{{item.key}}">
+                <image class="first_image" src="{{item.image}}" lazy-load="false" binderror="" bindload=""></image>
+            </view>
+        </block>
+    </view>
+
+    <view class="first_a" hover-class="none" hover-stop-propagation="false"
+        wx:if="{{page_settings.landing_page_bannder_2}}" bindtap = "bind_fans">
+        <image class="first_banner" src="{{page_settings.landing_page_bannder_2}}" lazy-load="false" binderror=""
+            bindload="" mode="widthFix"></image>
+    </view>
+
+    <view class="" hover-class="none" hover-stop-propagation="false" wx:for="{{page_settings.classic_list}}" wx:key="item">
+        <view class="classic_title" hover-class="none" hover-stop-propagation="false">
+            {{item.name}}
+        </view>
+        <view class="classic_detail_wrap" hover-class="none" hover-stop-propagation="false">
+            <block class="" hover-class="none" hover-stop-propagation="false" wx:for="{{item.top}}" wx:key="item">
+                <view class="top_detail" hover-class="none" hover-stop-propagation="false"
+                    bindtap="bind_sell_page" data-key="{{item.key}}" data-name="{{item.name}}">
+                    <image class="top_detail_image" src="{{item.image}}" mode="aspectFill" lazy-load="false"
+                        binderror="" bindload="">
+                    </image>
+                </view>
+            </block>
+        </view>
+
+       <view class="classic_detail_wrap" hover-class="none" hover-stop-propagation="false">
+            <block class="" hover-class="none" hover-stop-propagation="false" wx:for="{{item.list}}" wx:key="item">
+                <view class="classic_detail" hover-class="none" hover-stop-propagation="false" bindtap="bind_sell_page" data-key="{{item.key}}" data-name="{{item.name}}">
+                    {{item.name}}
+                    <image class="classic_detail_image" src="{{arror_icon}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+                        
+                    </image>
+                </view>
+            </block>
+       </view>
+
+    </view>
+
+    <view class="first_a" hover-class="none" hover-stop-propagation="false"
+        wx:if="{{page_settings.landing_page_bannder_3}}" bindtap = "bind_share">
+        <image class="first_banner" src="{{page_settings.landing_page_bannder_3}}" lazy-load="false" binderror=""
+            bindload="" mode="widthFix"></image>
+    </view>
+</view>

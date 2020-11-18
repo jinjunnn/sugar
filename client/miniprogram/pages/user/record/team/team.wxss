@@ -1,0 +1,65 @@
+/* pages/user/record/team/team.wxss */
+page {
+    background-color: #f7d0a6;
+}
+
+.wrap {
+    margin: 20rpx;
+}
+
+.item_wrap{
+    margin:20rpx;
+}
+
+.item_title{
+    background-color: #fdf9f8;
+    display:-webkit-flex;
+    justify-content: space-between;
+    font-weight: bolder;
+    border-radius: 20rpx 20rpx 0rpx 0rpx;
+    color:#999288;
+    font-size: 24rpx;
+}
+
+.item_title_item{
+    margin:20rpx;
+}
+
+.item_item{
+    display:-webkit-flex;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.item_image {
+    display: -webkit-flex;
+    justify-content: space-around;
+    padding: 20rpx 0rpx 20rpx 0rpx;
+    background-color: white;
+    border-radius: 0rpx 0rpx 20rpx 20rpx;
+}
+
+.image_item {
+    width: 95rpx;
+    height: 95rpx;
+}
+
+.image {
+    width: 95rpx;
+    height: 95rpx;
+    border-radius: 50%;
+}
+
+.image_item {
+    width: 95rpx;
+    height: 95rpx;
+    border-radius: 50%;
+}
+
+.image_else {
+    width: 94rpx;
+    height: 94rpx;
+    border-radius: 50%;
+    border: 1rpx dashed #4d3a23;
+}
+

@@ -1,0 +1,138 @@
+<!-- SUGAR快闪店 -->
+<view style="margin-left: 40rpx;">SUGAR全球快闪店</view>
+<view class="second_b" hover-class="none" hover-stop-propagation="false">
+    <view bindtap="bind_nav" data-url='/pages/list/list?key={{sugar_us}}&title=SUGAR美国' class="the_item">
+        <image class="second_image"
+            src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/58143788e67de70e56b9.png/%E7%83%AD%E5%BA%A6.png" lazy-load="false"
+            binderror="" bindload=""></image>
+        <view class="first_text" hover-class="none" hover-stop-propagation="false">
+            SUGAR美国
+        </view>
+    </view>
+    <view bindtap="bind_nav" class="the_item" data-url='/pages/list/list?key={{sugar_jp}}&title=SUGAR日本'>
+        <image class="second_image"
+            src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/f9e6c9adfdcadebfa1a7.png/%E8%AE%A2%E5%8D%95-.png" lazy-load="false"
+            binderror="" bindload=""></image>
+        <view class="first_text" hover-class="none" hover-stop-propagation="false">
+            SUGAR日本
+        </view>
+    </view>
+    <view bindtap="bind_nav" class="the_item" data-url='/pages/list/list?key={{sugar_requery}}&title=SUGAR求购'>
+        <image class="second_image"
+            src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/f9e6c9adfdcadebfa1a7.png/%E8%AE%A2%E5%8D%95-.png" lazy-load="false"
+            binderror="" bindload=""></image>
+        <view class="first_text" hover-class="none" hover-stop-propagation="false">
+            SUGAR求购
+        </view>
+    </view>
+</view>
+<view style="height:80rpx"></view>
+
+<!-- 海淘工具箱 -->
+<view style="margin-left: 40rpx;">海淘工具箱</view>
+<view class="second_b" hover-class="none" hover-stop-propagation="false">
+    <view bindtap="bind_nav" data-url='/pages/list/list?key={{buy_goods}}&title=同行收货' class="the_item">
+        <image class="second_image"
+            src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/58143788e67de70e56b9.png/%E7%83%AD%E5%BA%A6.png" lazy-load="false"
+            binderror="" bindload=""></image>
+        <view class="first_text" hover-class="none" hover-stop-propagation="false">
+            同行收货
+        </view>
+    </view>
+    <view bindtap="bind_nav" class="the_item" data-url='/pages/list/list?key={{sell_goods}}&title=同行出货'>
+        <image class="second_image"
+            src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/f9e6c9adfdcadebfa1a7.png/%E8%AE%A2%E5%8D%95-.png" lazy-load="false"
+            binderror="" bindload=""></image>
+        <view class="first_text" hover-class="none" hover-stop-propagation="false">
+            同行出货
+        </view>
+    </view>
+    <view bindtap="bind_nav" class="the_item" data-url='/pages/list/list?key={{sell_card}}&title=礼品卡'>
+        <image class="second_image"
+            src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/3f11cd5088b872b98619.png/%E5%85%85%E5%80%BC.png"
+            lazy-load="false" binderror="" bindload=""></image>
+        <view class="first_text" hover-class="none" hover-stop-propagation="false">
+            礼品卡
+        </view>
+    </view>
+    <view bindtap="bind_nav" class="the_item" data-url='/pages/list/list?key={{pindan}}&title=代刷/拼单'>
+        <image class="second_image"
+            src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/838ae3ee34f6a2f91158.png/%E9%92%B1%E5%8C%85.png" lazy-load="false"
+            binderror="" bindload=""></image>
+        <view class="first_text" hover-class="none" hover-stop-propagation="false">
+            代刷/拼单
+        </view>
+    </view>
+    <view bindtap="bind_nav" class="the_item" data-url='/pages/list/list?key={{black_list}}&title=不诚信名单'>
+        <image class="second_image"
+            src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/f95003efd5ed00c894fe.png/%E9%BB%91%E5%90%8D%E5%8D%95.png"
+            lazy-load="false" binderror="" bindload=""></image>
+        <view class="first_text" hover-class="none" hover-stop-propagation="false">
+            不诚信名单
+        </view>
+    </view>
+    <view bindtap="bind_nav" class="the_item" data-url='/pages/list/list?key={{goods_info}}&title=优惠情报'>
+        <image class="second_image"
+            src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/4bea6f7ff0e8cddad935.png/%E5%8A%A8%E6%80%81.png"
+            lazy-load="false" binderror="" bindload=""></image>
+        <view class="first_text" hover-class="none" hover-stop-propagation="false">
+            优惠情报
+        </view>
+    </view>
+</view>
+<view style="height:80rpx"></view>
+
+<!-- 商品管理 -->
+<view style="margin-left: 40rpx;">管理功能</view>
+<view class="second_b" hover-class="none" hover-stop-propagation="false">
+    <view bindtap="bind_nav" data-url='/pages/landing/landing' class="the_item">
+        <image class="second_image"
+            src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/58143788e67de70e56b9.png/%E7%83%AD%E5%BA%A6.png" lazy-load="false"
+            binderror="" bindload=""></image>
+        <view class="first_text" hover-class="none" hover-stop-propagation="false">
+            商品列表
+        </view>
+    </view>
+    <view bindtap="bind_nav" class="the_item" data-url='/pages/list/list?key={{sell_goods}}&title=同行出货'>
+        <image class="second_image"
+            src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/f9e6c9adfdcadebfa1a7.png/%E8%AE%A2%E5%8D%95-.png" lazy-load="false"
+            binderror="" bindload=""></image>
+        <view class="first_text" hover-class="none" hover-stop-propagation="false">
+            同行出货
+        </view>
+    </view>
+    <view bindtap="bind_nav" class="the_item" data-url='/pages/list/list?key={{sell_card}}&title=礼品卡'>
+        <image class="second_image"
+            src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/3f11cd5088b872b98619.png/%E5%85%85%E5%80%BC.png"
+            lazy-load="false" binderror="" bindload=""></image>
+        <view class="first_text" hover-class="none" hover-stop-propagation="false">
+            礼品卡
+        </view>
+    </view>
+    <view bindtap="bind_nav" class="the_item" data-url='/pages/list/list?key={{pindan}}&title=代刷/拼单'>
+        <image class="second_image"
+            src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/838ae3ee34f6a2f91158.png/%E9%92%B1%E5%8C%85.png" lazy-load="false"
+            binderror="" bindload=""></image>
+        <view class="first_text" hover-class="none" hover-stop-propagation="false">
+            代刷/拼单
+        </view>
+    </view>
+    <view bindtap="bind_nav" class="the_item" data-url='/pages/list/list?key={{black_list}}&title=不诚信名单'>
+        <image class="second_image"
+            src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/f95003efd5ed00c894fe.png/%E9%BB%91%E5%90%8D%E5%8D%95.png"
+            lazy-load="false" binderror="" bindload=""></image>
+        <view class="first_text" hover-class="none" hover-stop-propagation="false">
+            不诚信名单
+        </view>
+    </view>
+    <view bindtap="bind_nav" class="the_item" data-url='/pages/list/list?key={{goods_info}}&title=优惠情报'>
+        <image class="second_image"
+            src="http://lc-0EaEC5sQ.cn-n1.lcfile.com/4bea6f7ff0e8cddad935.png/%E5%8A%A8%E6%80%81.png"
+            lazy-load="false" binderror="" bindload=""></image>
+        <view class="first_text" hover-class="none" hover-stop-propagation="false">
+            优惠情报
+        </view>
+    </view>
+</view>
+<view style="height:80rpx"></view>
+

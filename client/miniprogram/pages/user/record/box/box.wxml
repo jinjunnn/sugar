@@ -1,0 +1,39 @@
+<view class="wrap">
+    <view wx:for="{{record}}" wx:for-item="item" wx:for-index="label_index">
+        <view class="item_wrap">
+            <image class="item_image" src="{{item.image}}"></image>
+            <view class="item_content">
+                <view class="item_content_name">礼盒号：{{item.box_id}} - {{item.index}}</view>
+                <view class="item_content_name">礼盒类型:
+                    <text wx:if="{{item.currency=='wish'}}">心愿礼盒</text>
+                    <text wx:else>现金礼盒</text>
+                </view>
+                <view class="item_content_name">礼盒名称：{{item.name}}</view>
+                <view class="item_content_name">开盒奖品：{{item.card_info}}</view>
+            </view>
+        </view>
+        <view class="pay_wrap">
+            <view class="pay_left_part">
+                <image class="pay_left_part_icon" src="{{zheng_icon}}"></image>
+                <view class="pay_left_part_text">正品保证</view>
+                <image class="pay_left_part_icon" src="{{red_arror_icon}}"></image>
+            </view>
+            <view class="pay_right_part">
+                <view class="pay_right_part_total">
+                    <text style="color:#D54547">{{item.amount}}</text>
+                    <text wx:if="{{item.currency == 'cash'}}">元</text>
+                    <text wx:elif="{{item.currency == 'wish'}}">心愿</text>
+                </view>
+                <!-- <view class="button_buy" bindtap="button_complete" data-objectid="{{item.key}}"
+                    wx:if="{{!item.address}}">收货地址</view> -->
+                <view class="button_buy" bindtap="button_complete" data-objectid="{{item.id}}"
+                    wx:if="{{!item.status}}">备货中</view>
+                <view class="button_buy" bindtap="button_complete" data-objectid="{{item.id}}"
+                    wx:elif="{{item.status=='trans'}}">已发货</view>
+                <view class="button_buy" bindtap="button_complete" data-objectid="{{item.id}}"
+                    wx:else="{{item.status=='success'}}">已完成</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view style="height:60rpx"></view>

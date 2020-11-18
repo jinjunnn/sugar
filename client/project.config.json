@@ -1,0 +1,125 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"appid": "wx8fc9502b8f83f501",
+	"projectname": "eshop",
+	"libVersion": "2.8.1",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/agency/agency",
+					"pathName": "pages/agency/agency",
+					"query": "sharer=10000000",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "pages/share/share",
+					"pathName": "pages/share/share",
+					"query": "sharer=10000001",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/share/share",
+					"pathName": "pages/share/share",
+					"query": "sharer=10000002",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pages/landing/landing",
+					"pathName": "pages/landing/landing",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user/user",
+					"pathName": "pages/user/user",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "pages/likes/other",
+					"pathName": "pages/likes/other",
+					"query": "sharer=10000451&itemid=101",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "pages/likes/other",
+					"pathName": "pages/likes/other",
+					"query": "sharer=10000604&itemid=101",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/likes/likes",
+					"pathName": "pages/likes/likes",
+					"query": "sharer=10000604&itemid=101",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "pages/landing/sell/sell",
+					"pathName": "pages/landing/sell/sell",
+					"query": "key=list_skincare_0018",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/flash/item/item",
+					"pathName": "pages/flash/item/item",
+					"query": "post=1&title=我是title&key=list_1001",
+					"scene": null
+				}
+			]
+		}
+	}
+}

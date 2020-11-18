@@ -1,0 +1,56 @@
+<!-- 已经点赞过 -->
+<view class="wrapss" wx:if="{{tapped}}">
+    <view class="text" hover-class="none" hover-stop-propagation="false">
+        <text>您已经为好友点赞！
+            {{settings.share_page_tapped_title}}</text>
+    </view>
+    <image class="images" src="{{settings.share_page_share_image}}" mode="aspectFit|aspectFill|widthFix"
+        lazy-load="false" binderror=""
+        bindload="">
+    </image>
+    <view class="text" hover-class="none" hover-stop-propagation="false">
+        <text>您的好友赠送一份礼物给您！快去领取！
+        </text>
+    </view>
+    <button class="buttons" open-type="getUserInfo" bindtap="nav_to_likes_page">
+        立刻领取
+    </button>
+    <view style="height:30rpx"></view>
+</view>
+
+
+<!-- 未点赞过 -->
+<view class="wraps" wx:elif="{{!tapped}}">
+    <image class="images" src="{{image}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror=""
+        bindload="">
+    </image>
+    <view class="text" hover-class="none" hover-stop-propagation="false">
+        <text>{{settings.share_page_not_tap_title}}
+        </text>
+    </view>
+    <button class="buttons" open-type="getUserInfo" bindgetuserinfo="bind_likes">
+        为Ta点赞！
+    </button>
+    <view style="height:30rpx"></view>
+</view>
+
+<view wx:for="{{list}}" wx:key="item" class="hhh">
+    <view style="height: 40rpx;"></view>
+    <view class="wrap2" bindtap="bind_detail_page" data-link="{{item.link}}" data-key="{{item.key}}">
+        <image src="{{item.image}}" class="image2" mode='aspectFill'></image>
+        <view class="content_wrap2">
+            <view class="left_content">
+                <view class="title2">
+                    {{item.title}}
+                </view>
+                <view class="content">
+                    {{item.content}}
+                </view>
+            </view>
+            <view class="right_content">
+                <view class="right_item">{{item.buttons}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view style="height: 80rpx; background-color: #f2f2f2;"></view>

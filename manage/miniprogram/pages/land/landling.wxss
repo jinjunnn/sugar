@@ -1,0 +1,313 @@
+/* pages/landing/landling.wxss */
+
+
+.first {
+    margin:20rpx;
+}
+
+.first_a {
+
+}
+.first_banner{
+    width:710rpx;
+    border-radius: 10rpx;
+}
+
+.first_b{
+    padding:60rpx 0rpx 60rpx 0rpx;
+    display: -webkit-flex;
+}
+
+.first_image{
+    width:100rpx;
+    height: 100rpx;
+    border-radius: 50%; 
+}
+.first_text::after {
+    border: none;
+}
+.first_text {
+    font-size: 24rpx;
+    text-align: center;
+    outline: none;
+    border: none;
+    list-style: none;
+    padding:0rpx;
+}
+
+.first_sub_banner{
+    width:710rpx;
+    height: 180rpx;
+    border-radius: 10rpx;
+}
+.second_b {
+    margin:20rpx;
+    padding: 0rpx 0rpx 0rpx 0rpx;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+}
+.second_image {
+    width: 60rpx;
+    height: 60rpx;
+    padding:30rpx 55rpx 10rpx 55rpx;
+}
+
+.end{
+    /* background-color: #f2f2f2; */
+    color:#b0b0b0;
+    font-size: 24rpx;
+    text-align: center;
+}
+
+.model_image {
+    width: 300rpx;
+    height: 300rpx;
+    border-radius: 5rpx;
+    border: 3rpx solid white;
+}
+
+.model_content {
+    font-size: 24rpx;
+}
+
+.modal_btn_wrap {
+    width: 550rpx;
+    background-color: white;
+}
+
+.button_wrap {
+    display: -webkit-flex;
+    padding: 60rpx 0rpx 40rpx 0rpx;
+}
+
+.left_button {
+    width: 220rpx;
+    height: 70rpx;
+    background-color: #f36062;
+    color: white;
+    font-size: 28rpx;
+    border-radius: 35rpx;
+    border: 1rpx solid #f36062;
+}
+
+.right_button {
+    width: 220rpx;
+    height: 70rpx;
+    background-color: #ffe650;
+    color: white;
+    font-size: 28rpx;
+    border-radius: 35rpx;
+    border: 1rpx solid #ffe650;
+}
+
+.heihei {
+    font-size: 24rpx;
+    color: black;
+    text-align: center;
+    padding-bottom: 40rpx;
+}
+
+.close_icon {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+/* 以下是弹出框 */
+.commodity_screen {
+    background: #f36062;
+    color: #fff;
+    width: 550rpx;
+    height: 700prx;
+    border-radius: 20rpx;
+    opacity: 1;
+    overflow: hidden;
+    z-index: 100100;
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    margin: 0rpx 100rpx 0rpx 100rpx;
+}
+
+
+.bg_color {
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10000rpx;
+}
+
+/* .wrap_show{
+    opacity: 1;
+}
+
+.wrap_notshow{
+    opacity: 0.6;
+    background: gray;
+
+} */
+
+.modal_wrap {
+    margin: 30rpx;
+    text-align: center;
+}
+
+.title {
+    padding-top: 50rpx;
+    font-size: 30rpx;
+    padding-bottom: 40rpx;
+}
+
+.sub_title2 {
+    font-size: 24rpx;
+    padding-bottom: 2vh;
+}
+
+
+.input {
+    padding-top: 20rpx;
+    margin-top: 40rpx;
+    padding-bottom: 20rpx;
+    margin-bottom: 80rpx;
+    border: 1rpx solid white;
+    border-radius: 5rpx;
+}
+
+.input2 {
+    padding-top: 20rpx;
+    margin-top: 40rpx;
+    padding-bottom: 20rpx;
+    margin-bottom: 80rpx;
+    border-radius: 5rpx;
+}
+
+
+
+
+/* 一下是海淘学院的代码 */
+.wrap {
+    margin: 20rpx;
+}
+
+.item {
+    background-color: white;
+    border-radius: 5rpx;
+    font-size: 24rpx;
+    padding: 20rpx;
+    margin-bottom: 20rpx;
+    border-radius: 10rpx;
+    border-bottom: 1rpx solid #f2f2f2;
+}
+
+.sub_title {
+    width: 670rpx;
+    border-bottom: 1rpx solid #f0f0f0;
+    padding-bottom: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+
+.sub_item {
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+
+.sub_item2 {
+    display: -webkit-flex;
+    justify-content: space-between;
+    margin: 10rpx 0rpx 10rpx 0rpx;
+}
+
+.content {
+    color: gray;
+}
+
+.sub_left {
+    width: 500rpx;
+}
+
+.sub_right {
+    width: 110rpx;
+}
+
+.button {
+    width: 130rpx;
+    font-size: 24rpx;
+    padding: 0rpx;
+    border-radius: 10rpx;
+    color: white;
+    background-color: #f36062;
+    margin: 0rpx 0rpx 0rpx 20rpx;
+}
+
+.notice {
+    font-size: 24rpx;
+    color: gray;
+    margin: 40rpx 0rpx 40rpx 0rpx;
+    border-bottom: 1rpx solid #f2f2f2;
+    padding-bottom: 40rpx;
+}
+
+.sub_wrap {
+    display: -webkit-flex;
+    margin: 30rpx 0rpx 30rpx 0rpx;
+}
+
+
+.picker {
+    width: 450rpx;
+    border: 1rpx solid #f0f0f0;
+    padding: 10rpx;
+    border-radius: 5rpx;
+}
+
+.sub_wrap2 {
+    margin-bottom: 20rpx;
+    padding-bottom: 20rpx;
+    border-bottom: 1rpx solid #f0f0f0;
+}
+
+/* 新 */
+.sub_title4 {
+    width: 670rpx;
+    padding-bottom: 20rpx;
+}
+
+.item_iamge {
+    width: 670rpx;
+    padding: 20rpx;
+}
+
+.icon_image {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.flex_wrap {
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+
+.input_wrap{
+    display: -webkit-flex;
+    justify-content: space-around;
+}
+.input_content{
+    padding:20rpx;
+    border: 1rpx solid #eee;
+    width:550rpx;
+}
+.input_button{
+    width:170rpx;
+    background-color: #f36062;
+    color: white;
+    padding:20rpx;
+    text-align: center;
+}
+
+.the_item{
+    width:170rpx;
+}
